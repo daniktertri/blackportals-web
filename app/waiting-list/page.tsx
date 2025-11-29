@@ -34,13 +34,14 @@ export default function WaitingList() {
         body: JSON.stringify({ name, surname, email }),
       })
 
+      // Read response as text first, then parse as JSON
+      const responseText = await response.text()
       let data
       try {
-        data = await response.json()
+        data = JSON.parse(responseText)
       } catch (jsonError) {
         console.error('Failed to parse response JSON:', jsonError)
-        const text = await response.text()
-        console.error('Response text:', text)
+        console.error('Response text:', responseText)
         setMessage({ type: 'error', text: 'Invalid response from server. Please try again.' })
         setIsSubmitting(false)
         return
