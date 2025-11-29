@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Format message for Telegram
-    const message = `🎯 New Waiting List Signup\n\n` +
+    const message = `🎯 new waiting list member\n\n` +
       `👤 Name: ${name}\n` +
       `👤 Surname: ${surname}\n` +
       `📧 Email: ${email}`
