@@ -34,33 +34,43 @@ export default function Contact() {
         body: JSON.stringify({ name, email, message: messageText }),
       })
 
-      // Read response as text first, then parse as JSON
-      const responseText = await response.text()
-      let data
-      try {
-        data = JSON.parse(responseText)
-      } catch (jsonError) {
-        console.error('Failed to parse response JSON:', jsonError)
-        console.error('Response text:', responseText)
-        setMessage({ type: 'error', text: 'Invalid response from server. Please try again.' })
+      // Read response only once
+      if (!response.ok) {
+        // If response is not ok, try to read error message
+        let errorData: any = {}
+        try {
+          errorData = await response.json()
+        } catch {
+          // If can't parse, use status text
+          errorData = { error: response.statusText || 'Request failed' }
+        }
+        setMessage({ type: 'error', text: errorData.error || `Error: ${response.status}` })
         setIsSubmitting(false)
         return
       }
 
+      // Response is ok, parse JSON
+      const data = await response.json()
       console.log('API Response:', { status: response.status, data })
 
-      if (response.ok) {
+      if (data.success) {
         setMessage({ type: 'success', text: data.message || 'Message sent successfully!' })
         form.reset()
       } else {
-        console.error('API Error:', data)
         setMessage({ type: 'error', text: data.error || 'Failed to send message. Please try again.' })
       }
     } catch (error) {
       console.error('Fetch error:', error)
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      console.error('Error details:', errorMessage)
-      setMessage({ type: 'error', text: `An error occurred: ${errorMessage}` })
+      
+      // Handle specific error types
+      if (errorMessage.includes('disturbed') || errorMessage.includes('locked')) {
+        setMessage({ type: 'error', text: 'Network error. Please refresh the page and try again.' })
+      } else if (errorMessage.includes('Failed to fetch')) {
+        setMessage({ type: 'error', text: 'Network error. Please check your connection and try again.' })
+      } else {
+        setMessage({ type: 'error', text: `An error occurred: ${errorMessage}` })
+      }
     } finally {
       setIsSubmitting(false)
     }
