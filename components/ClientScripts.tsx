@@ -72,12 +72,12 @@ export default function ClientScripts() {
 
     // Enhanced Button Hover Effects
     document.querySelectorAll('.btn').forEach(button => {
-      button.addEventListener('mouseenter', function() {
-        ;(this as HTMLElement).style.transform = 'translateY(-3px) scale(1.02)'
+      button.addEventListener('mouseenter', () => {
+        ;(button as HTMLElement).style.transform = 'translateY(-3px) scale(1.02)'
       })
       
-      button.addEventListener('mouseleave', function() {
-        ;(this as HTMLElement).style.transform = 'translateY(0) scale(1)'
+      button.addEventListener('mouseleave', () => {
+        ;(button as HTMLElement).style.transform = 'translateY(0) scale(1)'
       })
     })
 
