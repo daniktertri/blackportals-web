@@ -63,10 +63,17 @@ export async function POST(request: NextRequest) {
 
     const data = await response.json()
 
+    console.log('Telegram API response status:', response.status)
+    console.log('Telegram API response data:', JSON.stringify(data, null, 2))
+
     if (!response.ok || !data.ok) {
-      console.error('Telegram API error:', data)
+      console.error('Telegram API error:', {
+        status: response.status,
+        statusText: response.statusText,
+        data: data
+      })
       return NextResponse.json(
-        { error: 'Failed to send message to Telegram' },
+        { error: `Failed to send message to Telegram: ${data.description || 'Unknown error'}` },
         { status: 500 }
       )
     }
@@ -77,8 +84,11 @@ export async function POST(request: NextRequest) {
     )
   } catch (error) {
     console.error('Error processing waiting list submission:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    const errorStack = error instanceof Error ? error.stack : undefined
+    console.error('Error details:', { errorMessage, errorStack })
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: `Internal server error: ${errorMessage}` },
       { status: 500 }
     )
   }

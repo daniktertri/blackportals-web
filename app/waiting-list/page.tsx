@@ -26,16 +26,32 @@ export default function WaitingList() {
         body: JSON.stringify({ name, surname, email }),
       })
 
-      const data = await response.json()
+      let data
+      try {
+        data = await response.json()
+      } catch (jsonError) {
+        console.error('Failed to parse response JSON:', jsonError)
+        const text = await response.text()
+        console.error('Response text:', text)
+        setMessage({ type: 'error', text: 'Invalid response from server. Please try again.' })
+        setIsSubmitting(false)
+        return
+      }
+
+      console.log('API Response:', { status: response.status, data })
 
       if (response.ok) {
         setMessage({ type: 'success', text: data.message || 'Successfully joined waiting list!' })
         e.currentTarget.reset()
       } else {
+        console.error('API Error:', data)
         setMessage({ type: 'error', text: data.error || 'Failed to join waiting list. Please try again.' })
       }
     } catch (error) {
-      setMessage({ type: 'error', text: 'An error occurred. Please try again.' })
+      console.error('Fetch error:', error)
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+      console.error('Error details:', errorMessage)
+      setMessage({ type: 'error', text: `An error occurred: ${errorMessage}` })
     } finally {
       setIsSubmitting(false)
     }
