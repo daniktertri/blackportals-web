@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
     // Get environment variables
     const botToken = process.env.BOT_TOKEN
-    const channelId = process.env.CHANNEL_ID
+    let channelId = process.env.CHANNEL_ID
 
     if (!botToken || !channelId) {
       console.error('Missing environment variables: BOT_TOKEN or CHANNEL_ID')
@@ -32,6 +32,13 @@ export async function POST(request: NextRequest) {
         { error: 'Server configuration error' },
         { status: 500 }
       )
+    }
+
+    // Handle private channel ID format
+    // Private channels need -100 prefix, public channels can use @username
+    // If it's a numeric ID and doesn't start with -, prepend -100
+    if (!channelId.startsWith('@') && !channelId.startsWith('-')) {
+      channelId = `-100${channelId}`
     }
 
     // Format message for Telegram
