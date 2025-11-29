@@ -1,18 +1,26 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
-import { FormEvent, useState } from 'react'
+import { FormEvent, useState, useRef } from 'react'
 
 export default function WaitingList() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setMessage(null)
 
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget || formRef.current
+    if (!form) {
+      setMessage({ type: 'error', text: 'Form not found. Please refresh the page.' })
+      setIsSubmitting(false)
+      return
+    }
+
+    const formData = new FormData(form)
     const name = formData.get('name') as string
     const surname = formData.get('surname') as string
     const email = formData.get('email') as string
@@ -42,7 +50,7 @@ export default function WaitingList() {
 
       if (response.ok) {
         setMessage({ type: 'success', text: data.message || 'Successfully joined waiting list!' })
-        e.currentTarget.reset()
+        form.reset()
       } else {
         console.error('API Error:', data)
         setMessage({ type: 'error', text: data.error || 'Failed to join waiting list. Please try again.' })
@@ -71,7 +79,7 @@ export default function WaitingList() {
           <div className="hero-content">
             <h1 className="hero-title">waiting list</h1>
             <p className="hero-subtitle">Join the exclusive network</p>
-            <form className="contact-form-simple" onSubmit={handleSubmit}>
+            <form ref={formRef} className="contact-form-simple" onSubmit={handleSubmit}>
               <div className="form-group">
                 <input type="text" name="name" placeholder="name" required />
               </div>
