@@ -96,40 +96,50 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <Link href="/" className="nav-logo" onClick={handleLogoClick}>
-          <div className="logo-symbol">
-            <div className="logo-ring outer"></div>
-            <div className="logo-ring inner"></div>
+    <>
+      <nav className="navbar">
+        <div className="nav-container">
+          <Link href="/" className="nav-logo" onClick={handleLogoClick}>
+            <div className="logo-symbol">
+              <div className="logo-ring outer"></div>
+              <div className="logo-ring inner"></div>
+            </div>
+            <h2 className="logo-text">blackportals</h2>
+          </Link>
+          <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link 
+                  href={link.href} 
+                  className={isActive(link.href) ? 'active' : ''}
+                  onMouseEnter={(e) => handleLinkHover(link.href, e.currentTarget)}
+                  onMouseLeave={handleLinkLeave}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            <div className="nav-indicator" ref={indicatorRef}></div>
+          </ul>
+          <div 
+            className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <h2>blackportals</h2>
-        </Link>
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link 
-                href={link.href} 
-                className={isActive(link.href) ? 'active' : ''}
-                onMouseEnter={(e) => handleLinkHover(link.href, e.currentTarget)}
-                onMouseLeave={handleLinkLeave}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-          <div className="nav-indicator" ref={indicatorRef}></div>
-        </ul>
-        <div 
-          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
-      </div>
-    </nav>
+      </nav>
+      {isMenuOpen && (
+        <div 
+          className="menu-overlay"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+    </>
   )
 }
 
