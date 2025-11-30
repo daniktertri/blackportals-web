@@ -122,6 +122,15 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.nav-menu-desktop {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -131,6 +140,7 @@ body {
     overflow: visible;
 }
 
+.nav-menu-desktop a,
 .nav-menu a {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
@@ -148,27 +158,33 @@ body {
 }
 
 /* Fade effect from right to left */
+.nav-menu-desktop li:nth-child(1) a,
 .nav-menu li:nth-child(1) a {
     opacity: 0.55;
 }
 
+.nav-menu-desktop li:nth-child(2) a,
 .nav-menu li:nth-child(2) a {
     opacity: 0.7;
 }
 
+.nav-menu-desktop li:nth-child(3) a,
 .nav-menu li:nth-child(3) a {
     opacity: 0.85;
 }
 
+.nav-menu-desktop li:nth-child(4) a,
 .nav-menu li:nth-child(4) a {
     opacity: 1;
 }
 
 /* On hover, increase opacity */
+.nav-menu-desktop a:hover,
 .nav-menu a:hover {
     opacity: 1 !important;
 }
 
+.nav-menu-desktop a.active,
 .nav-menu a.active {
     color: #ffffff;
     opacity: 1 !important;
@@ -192,8 +208,63 @@ body {
     padding: 0;
 }
 
+.nav-menu-desktop a::after,
 .nav-menu a::after {
     display: none;
+}
+
+/* Mobile Menu - Completely Separate */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(60px) saturate(200%);
+    -webkit-backdrop-filter: blur(60px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 1rem 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+                0 0 0 0.5px rgba(255, 255, 255, 0.1) inset;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-menu-link {
+    display: block;
+    padding: 14px 24px;
+    margin: 0 12px 4px 12px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: lowercase;
+    letter-spacing: -0.01em;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-menu-link:active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-link.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .hamburger {
@@ -1178,6 +1249,226 @@ section {
 /* About Section */
 .about {
     background: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Messages Container */
+.animated-messages-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.animated-message {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(30px) scale(0.7);
+    transition: none;
+}
+
+.animated-message.visible {
+    animation: iosMessagePopIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animated-message.hidden {
+    animation: iosMessagePopOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animated-message.disintegrating .message-bubble {
+    animation: telegramDelete 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-message.disintegrating .message-bubble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    animation: explodeParticles 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    pointer-events: none;
+}
+
+.animated-message.disintegrating .message-bubble::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+    transform: translate(-50%, -50%) scale(0);
+    animation: explodeOut 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    pointer-events: none;
+}
+
+.animated-message-left {
+    left: 5%;
+}
+
+.animated-message-right {
+    right: 5%;
+}
+
+.message-bubble {
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-transform: lowercase;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                0 0 0 0.5px rgba(255, 255, 255, 0.1) inset,
+                0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
+    max-width: 200px;
+    word-wrap: break-word;
+    line-height: 1.4;
+    position: relative;
+    transform-origin: bottom center;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    margin-left: 2px;
+    animation: blink 1s infinite;
+    vertical-align: baseline;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes iosMessagePopIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.7);
+    }
+    50% {
+        opacity: 0.9;
+        transform: translateY(-8px) scale(1.08);
+    }
+    70% {
+        transform: translateY(2px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes iosMessagePopOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.8);
+    }
+}
+
+@keyframes telegramDelete {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0px);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.3);
+        filter: blur(8px);
+    }
+}
+
+@keyframes explodeParticles {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes explodeOut {
+    0% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+.animated-message-left .message-bubble {
+    border-top-left-radius: 4px;
+    transform-origin: bottom left;
+}
+
+.animated-message-right .message-bubble {
+    border-top-right-radius: 4px;
+    transform-origin: bottom right;
+}
+
+@media (max-width: 1024px) {
+    .animated-message-left {
+        left: 2%;
+    }
+    
+    .animated-message-right {
+        right: 2%;
+    }
+    
+    .message-bubble {
+        max-width: 160px;
+        font-size: 0.875rem;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .animated-messages-container {
+        display: none;
+    }
 }
 
 .about-content {
@@ -1652,61 +1943,14 @@ section {
         height: 18px;
     }
 
-    .nav-menu {
-        position: fixed !important;
-        top: 80px !important;
-        left: 20px !important;
-        right: 20px !important;
-        width: auto !important;
-        max-width: 400px !important;
-        margin: 0 auto !important;
-        flex-direction: column !important;
-        background: rgba(255, 255, 255, 0.08) !important;
-        backdrop-filter: blur(60px) saturate(200%) !important;
-        -webkit-backdrop-filter: blur(60px) saturate(200%) !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 24px !important;
-        text-align: center !important;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        padding: 1rem 0 !important;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
-                    0 0 0 0.5px rgba(255, 255, 255, 0.1) inset !important;
-        gap: 0.25rem !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        z-index: 1000 !important;
-        visibility: hidden !important;
-        box-sizing: border-box !important;
-        transform: translateY(-10px) !important;
-    }
-
-    .nav-menu.active {
-        opacity: 1 !important;
-        pointer-events: all !important;
-        visibility: visible !important;
-        transform: translateY(0) !important;
-    }
-
-    .nav-menu li {
-        width: 100%;
-    }
-
-    .nav-menu a {
-        padding: 14px 24px;
-        margin: 0 12px;
-        border-radius: 12px;
-        display: block;
-        width: auto;
-        font-size: 16px;
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .nav-menu a:active {
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-indicator {
+    /* Hide desktop menu on mobile */
+    .nav-menu-desktop {
         display: none;
+    }
+
+    /* Show mobile menu */
+    .mobile-menu {
+        display: flex;
     }
 
     .hero-container {
@@ -1778,18 +2022,16 @@ section {
         height: 16px;
     }
 
-    .nav-menu {
-        top: 74px !important;
-        left: 16px !important;
-        right: 16px !important;
-        width: auto !important;
-        max-width: calc(100vw - 32px) !important;
-        padding: 0.75rem 0 !important;
-        transform: translateY(-10px) !important;
+    .mobile-menu {
+        top: 74px;
+        left: 16px;
+        right: 16px;
+        padding: 0.75rem 0;
     }
 
-    .nav-menu.active {
-        transform: translateY(0) !important;
+    .mobile-menu-link {
+        padding: 12px 20px;
+        font-size: 15px;
     }
 
     .nav-menu a {

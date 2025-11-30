@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import StarfieldTunnel from '@/components/StarfieldTunnel'
+import AnimatedMessages from '@/components/AnimatedMessages'
 import Link from 'next/link'
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="about">
+        <AnimatedMessages />
         <div className="container">
           <div className="about-content">
             <h2 className="section-title">What is BlackPortals</h2>

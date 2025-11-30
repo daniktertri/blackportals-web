@@ -39,10 +39,10 @@ export default function Navbar() {
       indicator.style.transition = ''
     }
 
-    const targetLink = linkElement || (document.querySelector('.nav-menu a.active') as HTMLElement)
+    const targetLink = linkElement || (document.querySelector('.nav-menu-desktop a.active') as HTMLElement)
     
     if (targetLink) {
-      const menu = targetLink.closest('.nav-menu') as HTMLElement
+      const menu = targetLink.closest('.nav-menu-desktop') as HTMLElement
       if (menu) {
         const menuRect = menu.getBoundingClientRect()
         const linkRect = targetLink.getBoundingClientRect()
@@ -73,7 +73,7 @@ export default function Navbar() {
   useEffect(() => {
     // Update indicator position when hover changes (with animation)
     if (hoveredLink) {
-      const hoveredElement = document.querySelector(`.nav-menu a[href="${hoveredLink}"]`) as HTMLElement
+      const hoveredElement = document.querySelector(`.nav-menu-desktop a[href="${hoveredLink}"]`) as HTMLElement
       if (hoveredElement) {
         updateIndicator(hoveredElement, true)
       }
@@ -106,7 +106,9 @@ export default function Navbar() {
             </div>
             <h2 className="logo-text">blackportals</h2>
           </Link>
-          <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+          
+          {/* Desktop Menu */}
+          <ul className="nav-menu-desktop">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link 
@@ -114,7 +116,6 @@ export default function Navbar() {
                   className={isActive(link.href) ? 'active' : ''}
                   onMouseEnter={(e) => handleLinkHover(link.href, e.currentTarget)}
                   onMouseLeave={handleLinkLeave}
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
@@ -122,6 +123,21 @@ export default function Navbar() {
             ))}
             <div className="nav-indicator" ref={indicatorRef}></div>
           </ul>
+
+          {/* Mobile Menu */}
+          <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href}
+                href={link.href} 
+                className={`mobile-menu-link ${isActive(link.href) ? 'active' : ''}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
           <div 
             className={`hamburger ${isMenuOpen ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
