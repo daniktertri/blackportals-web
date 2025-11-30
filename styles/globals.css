@@ -1663,8 +1663,7 @@ section {
         -webkit-backdrop-filter: blur(60px) saturate(200%);
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 24px;
-        width: calc(100% - 40px);
-        max-width: 400px;
+        width: min(calc(100vw - 40px), 400px);
         text-align: center;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 1rem 0;
@@ -1675,6 +1674,7 @@ section {
         pointer-events: none;
         z-index: 1000;
         visibility: hidden;
+        box-sizing: border-box;
     }
 
     .nav-menu.active {
@@ -1777,9 +1777,14 @@ section {
 
     .nav-menu {
         top: 74px;
-        width: calc(100% - 32px);
-        max-width: calc(100vw - 32px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        width: min(calc(100vw - 32px), 400px);
         padding: 0.75rem 0;
+    }
+
+    .nav-menu.active {
+        transform: translateX(-50%) translateY(0);
     }
 
     .nav-menu a {
