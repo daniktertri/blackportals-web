@@ -28,17 +28,6 @@ export default function Navbar() {
     setIsMenuOpen(false)
   }, [pathname])
 
-  useEffect(() => {
-    // Prevent body scroll when menu is open
-    if (isMenuOpen) {
-      document.body.classList.add('menu-open')
-    } else {
-      document.body.classList.remove('menu-open')
-    }
-    return () => {
-      document.body.classList.remove('menu-open')
-    }
-  }, [isMenuOpen])
 
   const updateIndicator = (linkElement: HTMLElement | null, animate: boolean = true) => {
     const indicator = indicatorRef.current
@@ -161,12 +150,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      {isMenuOpen && (
-        <div 
-          className="menu-overlay"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
     </>
   )
 }
