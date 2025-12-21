@@ -155,7 +155,7 @@ export default function Navbar() {
                   <input 
                     type="text" 
                     className="mobile-menu-search-input" 
-                    placeholder="Search"
+                    placeholder="search"
                     readOnly
                   />
                 </div>
