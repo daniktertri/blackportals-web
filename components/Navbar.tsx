@@ -139,18 +139,20 @@ export default function Navbar() {
             <div className="nav-indicator" ref={indicatorRef}></div>
           </ul>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu - Full Screen Overlay */}
           <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href}
-                href={link.href} 
-                className={`mobile-menu-link ${isActive(link.href) ? 'active' : ''}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            <div className="mobile-menu-content">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.href}
+                  href={link.href} 
+                  className={`mobile-menu-link ${isActive(link.href) ? 'active' : ''}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
           <div 
