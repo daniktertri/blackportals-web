@@ -28,6 +28,20 @@ export default function Navbar() {
     setIsMenuOpen(false)
   }, [pathname])
 
+  useEffect(() => {
+    // Lock body scroll when mobile menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
+
 
   const updateIndicator = (linkElement: HTMLElement | null, animate: boolean = true) => {
     const indicator = indicatorRef.current

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import '../styles/globals.css'
@@ -12,6 +12,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'BlackPortals - Exclusive Private Network',
   description: 'BlackPortals is an exclusive invitation-only private network for accomplished professionals, executives, and leaders. Quality connections, encrypted communications, no noise.',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
