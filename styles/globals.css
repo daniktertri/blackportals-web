@@ -225,7 +225,7 @@ body {
     display: none;
 }
 
-/* Mobile Menu - Full Screen Overlay */
+/* Mobile Menu - Phantom Style Full Screen */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -233,14 +233,11 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: #000000;
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.25s ease, visibility 0.25s ease;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -253,73 +250,60 @@ body {
 .mobile-menu-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     min-height: 100vh;
-    padding: 100px 20px 40px;
+    padding: 100px 24px 40px;
     gap: 0;
 }
 
 .mobile-menu-link {
     display: block;
-    padding: 20px 0;
-    color: rgba(255, 255, 255, 0.6);
+    padding: 16px 0;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-weight: 400;
-    font-size: 32px;
+    font-weight: 500;
+    font-size: 24px;
     text-transform: lowercase;
-    letter-spacing: 0.02em;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
     -webkit-tap-highlight-color: transparent;
-    text-align: center;
+    text-align: left;
     width: 100%;
-    max-width: 400px;
     position: relative;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(-20px);
 }
 
 .mobile-menu.active .mobile-menu-link {
-    animation: menuItemFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: menuSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .mobile-menu.active .mobile-menu-link:nth-child(1) {
-    animation-delay: 0.1s;
+    animation-delay: 0.05s;
 }
 
 .mobile-menu.active .mobile-menu-link:nth-child(2) {
-    animation-delay: 0.15s;
+    animation-delay: 0.1s;
 }
 
 .mobile-menu.active .mobile-menu-link:nth-child(3) {
-    animation-delay: 0.2s;
+    animation-delay: 0.15s;
 }
 
 .mobile-menu.active .mobile-menu-link:nth-child(4) {
-    animation-delay: 0.25s;
+    animation-delay: 0.2s;
 }
 
-@keyframes menuItemFadeIn {
+@keyframes menuSlideIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateX(-20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
-}
-
-.mobile-menu-link::after {
-    content: '';
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 40px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-link:hover,
@@ -327,26 +311,16 @@ body {
     color: #ffffff;
 }
 
-.mobile-menu-link:hover::after,
-.mobile-menu-link:active::after {
-    transform: translateX(-50%) scaleX(1);
-}
-
 .mobile-menu-link.active {
     color: #ffffff;
-}
-
-.mobile-menu-link.active::after {
-    transform: translateX(-50%) scaleX(1);
-    background: rgba(255, 255, 255, 0.6);
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 24px;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
     padding: 0;
     background: none;
@@ -362,14 +336,14 @@ body {
     width: 100%;
     height: 2px;
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 2px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
 }
 
-/* Hamburger to X transformation */
+/* Phantom-style Hamburger to X transformation */
 .hamburger.active span:nth-child(1) {
-    transform: translateY(11px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -378,7 +352,7 @@ body {
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -2131,12 +2105,12 @@ section {
     }
 
     .mobile-menu-content {
-        padding: 70px 16px 40px;
+        padding: 80px 20px 40px;
     }
 
     .mobile-menu-link {
-        padding: 16px 0;
-        font-size: 26px;
+        padding: 14px 0;
+        font-size: 22px;
     }
 
     .mobile-menu-content {
