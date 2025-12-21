@@ -225,26 +225,19 @@ body {
     display: none;
 }
 
-/* Mobile Menu - Full Screen Overlay */
+/* Mobile Menu - Simple Full Screen */
 .mobile-menu {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: #000000;
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .mobile-menu.active {
@@ -257,93 +250,38 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 80px 20px 40px;
-    gap: 1rem;
+    height: 100vh;
+    padding: 0 20px;
+    gap: 0;
 }
 
 .mobile-menu-link {
     display: block;
-    padding: 20px 32px;
-    color: rgba(255, 255, 255, 0.8);
+    padding: 24px 0;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
     text-transform: lowercase;
     letter-spacing: -0.01em;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.2s ease;
     -webkit-tap-highlight-color: transparent;
-    border-radius: 16px;
     text-align: center;
-    min-width: 200px;
-    position: relative;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.mobile-menu.active .mobile-menu-link {
-    animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.mobile-menu-link:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.mobile-menu-link:nth-child(2) {
-    animation-delay: 0.15s;
-}
-
-.mobile-menu-link:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.mobile-menu-link:nth-child(4) {
-    animation-delay: 0.25s;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.mobile-menu-link::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
     width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1;
+    max-width: 300px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.mobile-menu-link:active::before,
-.mobile-menu-link:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+.mobile-menu-link:last-child {
+    border-bottom: none;
 }
 
 .mobile-menu-link:active {
     color: #ffffff;
-    transform: scale(0.98);
 }
 
 .mobile-menu-link.active {
     color: #ffffff;
-}
-
-.mobile-menu-link.active::before {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translate(-50%, -50%) scale(1);
 }
 
 .hamburger {
@@ -352,7 +290,7 @@ body {
     cursor: pointer;
     padding: 8px;
     border-radius: 999px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     min-height: 44px;
@@ -361,6 +299,8 @@ body {
     justify-content: center;
     z-index: 1002;
     position: relative;
+    width: 30px;
+    height: 30px;
 }
 
 .hamburger:hover {
@@ -368,24 +308,43 @@ body {
 }
 
 .hamburger span {
+    position: absolute;
     width: 22px;
     height: 2px;
     background: rgba(255, 255, 255, 0.9);
-    margin: 3px 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
+.hamburger span:nth-child(1) {
+    top: 8px;
+    left: 4px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 14px;
+    left: 4px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 20px;
+    left: 4px;
+}
+
+/* Transform to X when active */
 .hamburger.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    top: 14px;
+    transform: rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
     opacity: 0;
+    transform: scale(0);
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    top: 14px;
+    transform: rotate(-45deg);
 }
 
 /* Hero Section */
@@ -2138,14 +2097,12 @@ section {
     }
 
     .mobile-menu-content {
-        padding: 60px 16px 40px;
-        gap: 0.75rem;
+        padding: 0 16px;
     }
 
     .mobile-menu-link {
-        padding: 18px 28px;
-        font-size: 20px;
-        min-width: 180px;
+        padding: 20px 0;
+        font-size: 24px;
     }
 
     .nav-menu a {
