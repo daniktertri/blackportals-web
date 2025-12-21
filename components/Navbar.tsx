@@ -139,19 +139,40 @@ export default function Navbar() {
             <div className="nav-indicator" ref={indicatorRef}></div>
           </ul>
 
-          {/* Mobile Menu - Full Screen Overlay */}
-          <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
-            <div className="mobile-menu-content">
-              {navLinks.map((link) => (
-                <Link 
-                  key={link.href}
-                  href={link.href} 
-                  className={`mobile-menu-link ${isActive(link.href) ? 'active' : ''}`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+          {/* Mobile Menu - Phantom Style */}
+          <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`} onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setIsMenuOpen(false)
+            }
+          }}>
+            <div className="mobile-menu-content" onClick={(e) => e.stopPropagation()}>
+              <div className="mobile-menu-search">
+                <div style={{ position: 'relative' }}>
+                  <svg className="mobile-menu-search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M19 19L14.65 14.65" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <input 
+                    type="text" 
+                    className="mobile-menu-search-input" 
+                    placeholder="Search"
+                    readOnly
+                  />
+                </div>
+              </div>
+              <div className="mobile-menu-links">
+                {navLinks.map((link) => (
+                  <Link 
+                    key={link.href}
+                    href={link.href} 
+                    className={`mobile-menu-link ${isActive(link.href) ? 'active' : ''}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span>{link.label}</span>
+                    <span className="mobile-menu-link-chevron"></span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 

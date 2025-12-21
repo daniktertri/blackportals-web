@@ -225,21 +225,26 @@ body {
     display: none;
 }
 
-/* Mobile Menu - Phantom Style Full Screen */
+/* Mobile Menu - Phantom Style */
 .mobile-menu {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100vh;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    padding: 0;
 }
 
 .mobile-menu.active {
@@ -248,71 +253,105 @@ body {
 }
 
 .mobile-menu-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    min-height: 100vh;
-    padding: 100px 24px 40px;
-    gap: 0;
+    position: absolute;
+    top: 80px;
+    left: 16px;
+    right: 16px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    padding: 0;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.active .mobile-menu-content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.mobile-menu-search {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.mobile-menu-search-input {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    background: rgba(0, 0, 0, 0.04);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    font-family: inherit;
+    outline: none;
+    position: relative;
+}
+
+.mobile-menu-search-input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.mobile-menu-search-icon {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.mobile-menu-links {
+    padding: 8px 0;
 }
 
 .mobile-menu-link {
-    display: block;
-    padding: 16px 0;
-    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    color: #000000;
     text-decoration: none;
     font-weight: 500;
-    font-size: 24px;
-    text-transform: lowercase;
+    font-size: 17px;
     letter-spacing: -0.01em;
-    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
     -webkit-tap-highlight-color: transparent;
-    text-align: left;
-    width: 100%;
     position: relative;
-    opacity: 0;
-    transform: translateX(-20px);
-}
-
-.mobile-menu.active .mobile-menu-link {
-    animation: menuSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.mobile-menu.active .mobile-menu-link:nth-child(1) {
-    animation-delay: 0.05s;
-}
-
-.mobile-menu.active .mobile-menu-link:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.mobile-menu.active .mobile-menu-link:nth-child(3) {
-    animation-delay: 0.15s;
-}
-
-.mobile-menu.active .mobile-menu-link:nth-child(4) {
-    animation-delay: 0.2s;
-}
-
-@keyframes menuSlideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .mobile-menu-link:hover,
 .mobile-menu-link:active {
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .mobile-menu-link.active {
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.mobile-menu-link-chevron {
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-link-chevron::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    transform: rotate(45deg);
 }
 
 .hamburger {
@@ -2105,12 +2144,19 @@ section {
     }
 
     .mobile-menu-content {
-        padding: 80px 20px 40px;
+        top: 70px;
+        left: 12px;
+        right: 12px;
+        border-radius: 20px;
+    }
+
+    .mobile-menu-search {
+        padding: 16px 16px 12px;
     }
 
     .mobile-menu-link {
-        padding: 14px 0;
-        font-size: 22px;
+        padding: 14px 16px;
+        font-size: 16px;
     }
 
     .mobile-menu-content {
