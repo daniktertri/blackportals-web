@@ -56,7 +56,7 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
               onClick={onClose}
               aria-label="Close"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
@@ -77,15 +77,15 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
               </p>
               
               <p>
-                Each conversation, either in groups or in 1:1 messages are end-to-end encrypted with post quantum protocols.
+                Each conversation, whether in groups or 1:1 messages, is end-to-end encrypted with post-quantum protocols. Your communications remain private and secure.
               </p>
               
               <p>
-                Each report of a BlackPortals member who you think might not suit our model by its attitude will be examined within 8 hours and might lead to an account termination. We take greatest care of each the safety and privacy of all our members to make BlackPortals a serious networking place.
+                Each report of a BlackPortals member who you think might not suit our model by their attitude will be examined within 8 hours and may lead to account termination. We take the greatest care of the safety and privacy of all our members to make BlackPortals a serious networking place.
               </p>
               
               <p>
-                Screenshots are unavailable all around the app to make sure the app and can lead to permanent ban.
+                Screenshots are disabled throughout the app to ensure privacy and can lead to permanent ban if attempted.
               </p>
             </div>
 

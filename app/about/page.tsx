@@ -8,7 +8,7 @@ export default function About() {
         <div className="container">
           <div className="about-page-content">
             <h1 className="page-title">About</h1>
-            <p className="page-subtitle">Ca c&apos;est productif</p>
+            <p className="page-subtitle">Productivity through exclusivity</p>
             
             <div className="about-content">
               {/* Failure of Other Networks */}

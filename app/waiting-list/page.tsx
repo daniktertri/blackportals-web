@@ -69,13 +69,7 @@ export default function WaitingList() {
   return (
     <>
       <Navbar />
-      <section className="hero hero-liquid">
-        <div className="liquid-background">
-          <div className="liquid-blob blob-1"></div>
-          <div className="liquid-blob blob-2"></div>
-          <div className="liquid-blob blob-3"></div>
-        </div>
-        
+      <section className="hero">
         <div className="container">
           <div className="hero-content">
             <h1 className="hero-title">waiting list</h1>
