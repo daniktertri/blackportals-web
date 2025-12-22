@@ -3195,121 +3195,51 @@ section {
     position: relative;
 }
 
-/* Phone Mockup Styles */
-.phone-mockup {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.phone-mockup-small {
-    width: 280px;
-    height: 560px;
-}
-
-.phone-mockup-large {
-    width: 360px;
-    height: 720px;
-}
-
-.phone-frame {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-    border-radius: 40px;
-    padding: 12px;
-    box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-        inset 0 2px 4px rgba(0, 0, 0, 0.3);
-    position: relative;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.phone-mockup:hover .phone-frame {
-    transform: translateY(-8px);
-    box-shadow: 
-        0 30px 80px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(255, 255, 255, 0.15) inset,
-        inset 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.phone-frame::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 24px;
-    background: #000000;
-    border-radius: 0 0 16px 16px;
-    z-index: 2;
-}
-
-.phone-screen {
-    width: 100%;
-    height: 100%;
-    background: #000000;
-    border-radius: 32px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.phone-screenshot-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 2px dashed rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    padding: 2rem;
-    transition: all 0.3s ease;
-}
-
-.phone-screenshot-placeholder p {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.phone-screenshot-placeholder span {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.4);
-}
-
-/* When image is added, hide placeholder text */
-.phone-screen img,
-.phone-screen .phone-screenshot {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Mockup Image Styles - Plain images only, no frames or borders */
+.mockup-image {
     display: block;
-    border-radius: inherit;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    pointer-events: auto;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.phone-screen:has(img) .phone-screenshot-placeholder,
-.phone-screen:has(.phone-screenshot) .phone-screenshot-placeholder {
-    display: none;
+.mockup-image-small {
+    max-width: 280px;
+    max-height: 560px;
 }
 
-/* Support for Next.js Image component with fill prop */
-.phone-screen > div[style*="position: relative"] {
-    width: 100%;
-    height: 100%;
+.mockup-image-large {
+    max-width: 360px;
+    max-height: 720px;
 }
 
-.phone-screen > div[style*="position: relative"] img {
-    border-radius: inherit;
+.portals-hero-mockup .mockup-image {
+    max-width: 400px;
+    max-height: 800px;
+}
+
+@media (max-width: 768px) {
+    .mockup-image-small {
+        max-width: 240px;
+        max-height: 480px;
+    }
+    
+    .mockup-image-large {
+        max-width: 300px;
+        max-height: 600px;
+    }
+    
+    .portals-hero-mockup .mockup-image {
+        max-width: 280px;
+        max-height: 560px;
+    }
 }
 
 /* Features Section */
@@ -3455,26 +3385,6 @@ section {
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    .phone-mockup-small {
-        width: 240px;
-        height: 480px;
-    }
-    
-    .phone-mockup-large {
-        width: 300px;
-        height: 600px;
-    }
-    
-    .phone-frame {
-        border-radius: 32px;
-        padding: 10px;
-    }
-    
-    .phone-screen {
-        border-radius: 24px;
-    }
-}
 
 /* Animated Circles */
 .animated-circles-container {

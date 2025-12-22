@@ -19,13 +19,7 @@ export default function Portals() {
               </p>
             </div>
             <div className="portals-hero-mockup">
-              <div className="phone-mockup">
-                <div className="phone-frame">
-                  <div className="phone-screen">
-                    <img src="/mockup/test.png" alt="BlackPortals App" className="phone-screenshot" />
-                  </div>
-                </div>
-              </div>
+              <img src="/mockup/test.png" alt="BlackPortals App" className="mockup-image" />
             </div>
           </div>
         </div>
@@ -43,13 +37,7 @@ export default function Portals() {
             {/* Feature 1 */}
             <div className="portals-feature-item">
               <div className="portals-feature-mockup">
-                <div className="phone-mockup phone-mockup-small">
-                  <div className="phone-frame">
-                    <div className="phone-screen">
-                      <img src="/mockup/test.png" alt="Exclusive Circles" className="phone-screenshot" />
-                    </div>
-                  </div>
-                </div>
+                <img src="/mockup/test.png" alt="Exclusive Circles" className="mockup-image mockup-image-small" />
               </div>
               <div className="portals-feature-content">
                 <h3>Exclusive Circles</h3>
@@ -60,13 +48,7 @@ export default function Portals() {
             {/* Feature 2 */}
             <div className="portals-feature-item portals-feature-item-reverse">
               <div className="portals-feature-mockup">
-                <div className="phone-mockup phone-mockup-small">
-                  <div className="phone-frame">
-                    <div className="phone-screen">
-                      <img src="/mockup/test.png" alt="Private Messaging" className="phone-screenshot" />
-                    </div>
-                  </div>
-                </div>
+                <img src="/mockup/test.png" alt="Private Messaging" className="mockup-image mockup-image-small" />
               </div>
               <div className="portals-feature-content">
                 <h3>Private Messaging</h3>
@@ -77,13 +59,7 @@ export default function Portals() {
             {/* Feature 3 */}
             <div className="portals-feature-item">
               <div className="portals-feature-mockup">
-                <div className="phone-mockup phone-mockup-small">
-                  <div className="phone-frame">
-                    <div className="phone-screen">
-                      <img src="/mockup/test.png" alt="Secure & Private" className="phone-screenshot" />
-                    </div>
-                  </div>
-                </div>
+                <img src="/mockup/test.png" alt="Secure & Private" className="mockup-image mockup-image-small" />
               </div>
               <div className="portals-feature-content">
                 <h3>Secure & Private</h3>
@@ -100,22 +76,10 @@ export default function Portals() {
           <h2 className="portals-section-title">See it in action</h2>
           <div className="portals-showcase-grid">
             <div className="portals-showcase-mockup">
-              <div className="phone-mockup phone-mockup-large">
-                <div className="phone-frame">
-                  <div className="phone-screen">
-                    <img src="/mockup/test.png" alt="BlackPortals App" className="phone-screenshot" />
-                  </div>
-                </div>
-              </div>
+              <img src="/mockup/test.png" alt="BlackPortals App" className="mockup-image mockup-image-large" />
             </div>
             <div className="portals-showcase-mockup">
-              <div className="phone-mockup phone-mockup-large">
-                <div className="phone-frame">
-                  <div className="phone-screen">
-                    <img src="/mockup/test.png" alt="BlackPortals App" className="phone-screenshot" />
-                  </div>
-                </div>
-              </div>
+              <img src="/mockup/test.png" alt="BlackPortals App" className="mockup-image mockup-image-large" />
             </div>
           </div>
         </div>
