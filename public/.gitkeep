@@ -1,0 +1,33 @@
+# Public Folder
+
+This folder contains static assets that can be accessed directly from your Next.js application.
+
+## Usage
+
+Place your images, screenshots, and other static files here. They can be referenced in your code using paths starting with `/`.
+
+### Examples:
+
+- `/screenshot1.jpg` → `public/screenshot1.jpg`
+- `/images/app-screen.png` → `public/images/app-screen.png`
+- `/screenshots/hero.jpg` → `public/screenshots/hero.jpg`
+
+### In your code:
+
+```jsx
+// Regular img tag
+<img src="/screenshot1.jpg" alt="Screenshot" />
+
+// Next.js Image component
+import Image from 'next/image'
+<Image src="/screenshot1.jpg" alt="Screenshot" width={400} height={800} />
+```
+
+## Recommended Structure
+
+You can organize your files like this:
+- `public/screenshots/` - For app screenshots
+- `public/images/` - For other images
+- `public/icons/` - For icons
+- `public/favicon.ico` - For favicon
+
