@@ -22,16 +22,7 @@ export default function Portals() {
               <div className="phone-mockup">
                 <div className="phone-frame">
                   <div className="phone-screen">
-                    {/* To add your screenshot, replace the placeholder div below with:
-                        <img src="/screenshots/screenshot1.jpg" alt="App Screenshot" className="phone-screenshot" />
-                        Or use Next.js Image:
-                        <Image src="/screenshots/screenshot1.jpg" alt="App Screenshot" fill className="phone-screenshot" />
-                        Note: Place your images in the /public/screenshots/ folder
-                    */}
-                    <div className="phone-screenshot-placeholder">
-                      <p>App Screenshot 1</p>
-                      <span>Add your screenshot here</span>
-                    </div>
+                    <img src="/mockup/test.png" alt="BlackPortals App" className="phone-screenshot" />
                   </div>
                 </div>
               </div>
@@ -55,11 +46,7 @@ export default function Portals() {
                 <div className="phone-mockup phone-mockup-small">
                   <div className="phone-frame">
                     <div className="phone-screen">
-                      {/* Replace with: <img src="/screenshots/screenshot2.jpg" alt="Exclusive Circles" className="phone-screenshot" /> */}
-                      <div className="phone-screenshot-placeholder">
-                        <p>App Screenshot 2</p>
-                        <span>Add your screenshot here</span>
-                      </div>
+                      <img src="/mockup/test.png" alt="Exclusive Circles" className="phone-screenshot" />
                     </div>
                   </div>
                 </div>
@@ -76,11 +63,7 @@ export default function Portals() {
                 <div className="phone-mockup phone-mockup-small">
                   <div className="phone-frame">
                     <div className="phone-screen">
-                      {/* Replace with: <img src="/screenshots/screenshot3.jpg" alt="Private Messaging" className="phone-screenshot" /> */}
-                      <div className="phone-screenshot-placeholder">
-                        <p>App Screenshot 3</p>
-                        <span>Add your screenshot here</span>
-                      </div>
+                      <img src="/mockup/test.png" alt="Private Messaging" className="phone-screenshot" />
                     </div>
                   </div>
                 </div>
@@ -97,11 +80,7 @@ export default function Portals() {
                 <div className="phone-mockup phone-mockup-small">
                   <div className="phone-frame">
                     <div className="phone-screen">
-                      {/* Replace with: <img src="/screenshots/screenshot4.jpg" alt="Secure & Private" className="phone-screenshot" /> */}
-                      <div className="phone-screenshot-placeholder">
-                        <p>App Screenshot 4</p>
-                        <span>Add your screenshot here</span>
-                      </div>
+                      <img src="/mockup/test.png" alt="Secure & Private" className="phone-screenshot" />
                     </div>
                   </div>
                 </div>
@@ -124,11 +103,7 @@ export default function Portals() {
               <div className="phone-mockup phone-mockup-large">
                 <div className="phone-frame">
                   <div className="phone-screen">
-                    {/* Replace with: <img src="/screenshots/screenshot5.jpg" alt="App Screenshot" className="phone-screenshot" /> */}
-                    <div className="phone-screenshot-placeholder">
-                      <p>App Screenshot 5</p>
-                      <span>Add your screenshot here</span>
-                    </div>
+                    <img src="/mockup/test.png" alt="BlackPortals App" className="phone-screenshot" />
                   </div>
                 </div>
               </div>
@@ -137,11 +112,7 @@ export default function Portals() {
               <div className="phone-mockup phone-mockup-large">
                 <div className="phone-frame">
                   <div className="phone-screen">
-                    {/* Replace with: <img src="/screenshots/screenshot6.jpg" alt="App Screenshot" className="phone-screenshot" /> */}
-                    <div className="phone-screenshot-placeholder">
-                      <p>App Screenshot 6</p>
-                      <span>Add your screenshot here</span>
-                    </div>
+                    <img src="/mockup/test.png" alt="BlackPortals App" className="phone-screenshot" />
                   </div>
                 </div>
               </div>
