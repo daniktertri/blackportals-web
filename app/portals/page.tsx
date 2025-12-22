@@ -1,49 +1,54 @@
 import Navbar from '@/components/Navbar'
+import AnimatedCircles from '@/components/AnimatedCircles'
+import PublicFeed from '@/components/PublicFeed'
+import PortalsFeed from '@/components/PortalsFeed'
 
 export default function Portals() {
   return (
     <>
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="portals-page-hero">
+      {/* Top Section - Circles and Description */}
+      <section className="portals-intro-section">
         <div className="container">
-          <div className="portals-hero-content">
-            <h1 className="page-title">Portals</h1>
-            <p className="page-subtitle">Elite Networking Platform</p>
-            <p className="portals-description">
-              Exclusive access to the world&apos;s most influential network. Connect with CEOs, 
-              Bank Officials, Crypto Whales, and Industry Leaders through our premium iPhone application.
-            </p>
+          <div className="portals-intro-grid">
+            {/* Left: Animated Circles */}
+            <div className="portals-circles-column">
+              <AnimatedCircles />
+            </div>
+
+            {/* Right: Description */}
+            <div className="portals-description-column">
+              <h2 className="portals-intro-title">Portals: Your new gateway to grow your network</h2>
+              <div className="portals-intro-text">
+                <p>
+                  Following your application, our reviewing team will add you to curated Portals where you will able to connect with professionals who work in your field of interests.
+                </p>
+                <p>
+                  Each Portals is a new opportunity to expand your business activities, discuss partnerships and share insights of your industry. BlackPortals exclusivity prevents unproductive noise and ensure that each minute spent within our community benefits you.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* App Features */}
-      <section className="portals-features">
+      {/* Communication Comparison Section */}
+      <section className="portals-comparison-section">
         <div className="container">
-          <div className="portals-features-content">
-            <h2 className="section-title">iOS Application</h2>
-            <p className="portals-lead">
-              Native iOS app with dark mode by default. Built for professionals who demand excellence in every interaction.
-            </p>
-            <div className="app-features-grid">
-              <div className="app-feature-item">
-                <h3>Home</h3>
-                <p>Curated feed with liquid glass navigation</p>
-              </div>
-              <div className="app-feature-item">
-                <h3>Messages</h3>
-                <p>End-to-end encrypted private & group chats</p>
-              </div>
-              <div className="app-feature-item">
-                <h3>Circles</h3>
-                <p>Exclusive professional circles</p>
-              </div>
-              <div className="app-feature-item">
-                <h3>Profile</h3>
-                <p>Customizable with privacy controls</p>
-              </div>
+          <h2 className="comparison-title">BlackPortals: a new way to communicate</h2>
+          
+          <div className="comparison-grid">
+            {/* Left: Public */}
+            <div className="comparison-column public-column">
+              <h3 className="comparison-column-title">Public</h3>
+              <PublicFeed />
+            </div>
+
+            {/* Right: Portals */}
+            <div className="comparison-column portals-column">
+              <h3 className="comparison-column-title">Portals</h3>
+              <PortalsFeed />
             </div>
           </div>
         </div>

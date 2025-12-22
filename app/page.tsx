@@ -51,31 +51,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="features">
-        <div className="container">
-          <h2 className="section-title">Features</h2>
-          <div className="features-grid">
-            <div className="feature-item">
-              <h3>Exclusive Circles</h3>
-              <p>Curated networks of professionals who share your level of achievement and ambition.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Private Messaging</h3>
-              <p>End-to-end encrypted conversations. Your privacy is our priority.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Native iOS App</h3>
-              <p>Beautiful, intuitive interface designed for professionals on the go.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Mandatory 2FA</h3>
-              <p>Security isn&apos;t optional. Every account is protected with two-factor authentication.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </>
   )

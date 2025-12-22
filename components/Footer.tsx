@@ -1,36 +1,41 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
+import PrivacyModal from './PrivacyModal'
 
 export default function Footer() {
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false)
+
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h3>BlackPortals</h3>
-            <p>An exclusive private network for accomplished professionals. Quality connections, encrypted communications.</p>
+    <>
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-links">
+            <Link href="/waiting-list" className="footer-link">
+              Join BP
+            </Link>
+            <button 
+              className="footer-link footer-link-button"
+              onClick={() => setIsPrivacyModalOpen(true)}
+            >
+              Privacy
+            </button>
+            <Link href="/about" className="footer-link">
+              About us
+            </Link>
           </div>
-          <div className="footer-section">
-            <h4>Platform</h4>
-            <ul>
-              <li><Link href="/#features">Features</Link></li>
-              <li><Link href="/#how-it-works">How It Works</Link></li>
-              <li><Link href="/#privacy">Privacy</Link></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4>Company</h4>
-            <ul>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/#privacy">Privacy Policy</Link></li>
-              <li><Link href="/#terms">Terms</Link></li>
-            </ul>
+          <div className="footer-bottom">
+            <p>&copy; 2024 BlackPortals. All rights reserved.</p>
           </div>
         </div>
-        <div className="footer-bottom">
-          <p>&copy; 2024 BlackPortals. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+      
+      <PrivacyModal 
+        isOpen={isPrivacyModalOpen} 
+        onClose={() => setIsPrivacyModalOpen(false)} 
+      />
+    </>
   )
 }
 
