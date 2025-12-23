@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'BlackPortals - Exclusive Private Network',
   description: 'BlackPortals is an exclusive invitation-only private network for accomplished professionals, executives, and leaders. Quality connections, encrypted communications, no noise.',
+  icons: {
+    icon: '/icon/bpicon.png',
+  },
 }
 
 export const viewport: Viewport = {

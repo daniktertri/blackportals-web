@@ -118,7 +118,7 @@ export default function Navbar() {
           <Link href="/" className="nav-logo" onClick={handleLogoClick}>
             <Image
               src="/icon/bpicon.png"
-              alt="BlackPortals logo"
+              alt="BlackPortals"
               width={32}
               height={32}
               className="logo-symbol"
