@@ -1,21 +1,22 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import StarfieldTunnel from '@/components/StarfieldTunnel'
-import AnimatedMessages from '@/components/AnimatedMessages'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      
+
       {/* Hero Section */}
       <section id="home" className="hero">
         <StarfieldTunnel />
         <div className="hero-container">
           <div className="hero-content">
             <h1 className="hero-title">BlackPortals</h1>
-            <p className="hero-subtitle">A private network for exceptional professionals</p>
+            <p className="hero-subtitle">
+              A private, application-based, professional network
+            </p>
             <p className="hero-description">
               Quality connections. Encrypted communications. No noise.
             </p>
@@ -28,23 +29,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* What is BlackPortals */}
       <section id="about" className="about">
-        <AnimatedMessages />
         <div className="container">
           <div className="about-content">
             <h2 className="section-title">What is BlackPortals</h2>
             <div className="about-text">
               <p className="about-lead">
-                An exclusive private network for accomplished professionals, executives, and leaders.
+                BlackPortals is an exclusive private network for executives, senior professionals, and
+                high-potential individuals.
               </p>
               <p>
-                Think LinkedIn, but without the noise—where every connection matters and every conversation is meaningful. 
-                We curate our membership carefully, ensuring you connect with peers who share your level of achievement and ambition.
+                Membership is reviewed to uphold high standard and ensure relevance. BlackPortals is
+                designed for focused, direct interactions among peers at exceptional levels of
+                responsibility.
               </p>
               <p>
-                All communications are end-to-end encrypted. Your privacy is protected. This is a space where serious professionals 
-                can connect, collaborate, and create opportunities without distractions.
+                Privacy and security are fundamental. All communications are post-quantum encrypted.
+                The platform provides a discreet environment for collaboration and professional
+                exchange without advertisements or unnecessary noise.
               </p>
             </div>
           </div>
