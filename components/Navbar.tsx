@@ -124,7 +124,7 @@ export default function Navbar() {
               className="logo-symbol"
               priority
             />
-            <h2 className="logo-text">blackportals</h2>
+            <h2 className="logo-text">BlackPortals</h2>
           </Link>
           
           {/* Desktop Menu */}
