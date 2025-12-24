@@ -434,8 +434,13 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
-    background: linear-gradient(to bottom, transparent, #000000);
+    height: 400px;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0.5) 60%,
+        rgba(0, 0, 0, 1) 100%
+    );
     pointer-events: none;
     z-index: 2;
 }
@@ -1399,14 +1404,20 @@ section {
     overflow: hidden;
 }
 
+/* Gradient separator from hero to about */
 .about::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 200px;
-    background: linear-gradient(to bottom, #000000, transparent);
+    height: 300px;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.3) 30%,
+        rgba(0, 0, 0, 0.6) 60%,
+        rgba(0, 0, 0, 1) 100%
+    );
     pointer-events: none;
     z-index: 1;
 }
@@ -1647,6 +1658,26 @@ section {
     position: relative;
     z-index: 2;
     animation: fadeInUp 1s ease-out;
+}
+
+.about-page-content {
+    position: relative;
+    z-index: 1;
+}
+
+.portals-hero-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.portals-features-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.portals-showcase-grid {
+    position: relative;
+    z-index: 1;
 }
 
 .about-text {
@@ -1953,6 +1984,30 @@ section {
     background: #000000;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 60px 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient separator before footer */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(5, 5, 10, 0.5) 50%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 1;
 }
 
 .footer-content {
@@ -2724,6 +2779,26 @@ section {
 .about-page {
     background: #000000;
     padding: 120px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient separator from about to about-page */
+.about-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(10, 10, 15, 0.4) 25%,
+        rgba(15, 15, 20, 0.7) 50%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
 }
 
 .about-page-content {
@@ -3134,6 +3209,41 @@ section {
     overflow: hidden;
 }
 
+/* Gradient separator from about-page to portals-hero */
+.portals-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(5, 5, 10, 0.3) 20%,
+        rgba(10, 10, 15, 0.6) 50%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Gradient fade at bottom of portals-hero */
+.portals-hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(5, 5, 10, 0.4) 40%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
 .portals-hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3249,6 +3359,43 @@ section {
 .portals-features-section {
     background: #000000;
     padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient separator from portals-hero to portals-features */
+.portals-features-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(8, 8, 12, 0.35) 30%,
+        rgba(12, 12, 18, 0.65) 60%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Gradient fade at bottom of portals-features */
+.portals-features-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(5, 5, 8, 0.3) 35%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* Portals section title styles moved to Premium Typography section below */
@@ -3352,6 +3499,26 @@ section {
 .portals-showcase-section {
     background: #000000;
     padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient separator from portals-features to portals-showcase */
+.portals-showcase-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(10, 10, 15, 0.4) 25%,
+        rgba(15, 15, 20, 0.7) 55%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
 }
 
 .portals-showcase-grid {
