@@ -1,9 +1,6 @@
-import Navbar from '@/components/Navbar'
-
 export default function Portals() {
   return (
     <>
-      <Navbar />
       
       {/* Hero Section with Phone Mockup */}
       <section className="portals-hero-section">

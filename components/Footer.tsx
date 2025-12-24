@@ -8,8 +8,8 @@ export default function Footer() {
           <Link href="/waiting-list" className="footer-link">
             Join BP
           </Link>
-          <Link href="/about" className="footer-link">
-            About us
+          <Link href="/contact" className="footer-link">
+            Contact
           </Link>
         </div>
         <div className="footer-bottom">

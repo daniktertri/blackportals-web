@@ -1,9 +1,6 @@
-import Navbar from '@/components/Navbar'
-
 export default function About() {
   return (
     <>
-      <Navbar />
       <section className="about-page">
         <div className="container">
           <div className="about-page-content">
