@@ -3,10 +3,20 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
-export default function FloatingRequestButton() {
-  const [isVisible, setIsVisible] = useState(false)
+interface FloatingRequestButtonProps {
+  position?: 'left' | 'right'
+  alwaysVisible?: boolean
+}
+
+export default function FloatingRequestButton({ position = 'right', alwaysVisible = false }: FloatingRequestButtonProps) {
+  const [isVisible, setIsVisible] = useState(alwaysVisible)
 
   useEffect(() => {
+    if (alwaysVisible) {
+      setIsVisible(true)
+      return
+    }
+
     const handleScroll = () => {
       const heroButton = document.getElementById('hero-join-button')
       if (heroButton) {
@@ -24,14 +34,14 @@ export default function FloatingRequestButton() {
     handleScroll() // Check initial state
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [alwaysVisible])
 
   if (!isVisible) return null
 
   return (
     <Link 
       href="/waiting-list" 
-      className="floating-request-button"
+      className={`floating-request-button ${position === 'left' ? 'floating-request-button-left' : ''}`}
     >
       Request Access
     </Link>

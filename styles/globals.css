@@ -4188,6 +4188,9 @@ section {
                 0 0 0 0.5px rgba(255, 255, 255, 0.08) inset,
                 0 1px 0 0 rgba(255, 255, 255, 0.05) inset;
     animation: fadeInSlide 0.3s ease-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .floating-request-button:hover {
@@ -4203,6 +4206,56 @@ section {
     transform: translateY(0);
 }
 
+/* Floating Logo Button */
+.floating-logo-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(60px) saturate(200%);
+    -webkit-backdrop-filter: blur(60px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
+                0 0 0 0.5px rgba(255, 255, 255, 0.08) inset,
+                0 1px 0 0 rgba(255, 255, 255, 0.05) inset;
+    animation: fadeInSlide 0.3s ease-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.floating-logo-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3),
+                0 0 0 0.5px rgba(255, 255, 255, 0.12) inset,
+                0 1px 0 0 rgba(255, 255, 255, 0.08) inset;
+    transform: translateY(-1px);
+}
+
+.floating-logo-button:active {
+    transform: translateY(0);
+}
+
+.floating-logo-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.floating-logo-text {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
 @keyframes fadeInSlide {
     from {
         opacity: 0;
@@ -4214,11 +4267,33 @@ section {
     }
 }
 
+.floating-request-button-left {
+    right: auto;
+    left: 20px;
+}
+
 @media (max-width: 768px) {
     .floating-request-button {
         top: 16px;
         right: 16px;
         padding: 10px 20px;
         font-size: 0.875rem;
+    }
+    
+    .floating-request-button-left {
+        right: auto;
+        left: 16px;
+    }
+    
+    .floating-logo-button {
+        top: 16px;
+        left: 16px;
+        padding: 10px 16px;
+        font-size: 0.875rem;
+    }
+    
+    .floating-logo-icon {
+        width: 20px;
+        height: 20px;
     }
 } 
