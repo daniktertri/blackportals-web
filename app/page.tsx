@@ -35,6 +35,7 @@ export default function Home() {
         <div className="container">
           <div className="about-content">
             <ScrollAnimation direction="up" delay={0}>
+              <span className="section-category">Network</span>
               <h2 className="section-title">What is BlackPortals</h2>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={100}>
@@ -67,7 +68,7 @@ export default function Home() {
               {/* Failure of Other Networks */}
               <div className="about-section">
                 <ScrollAnimation direction="up" delay={0}>
-                  <h2 className="section-heading">Why BlackPortals?</h2>
+                  <h2 className="section-heading" data-category="Exclusivity">Why BlackPortals?</h2>
                 </ScrollAnimation>
                 <ScrollAnimation direction="up" delay={150}>
                   <div className="about-text">
@@ -78,7 +79,7 @@ export default function Home() {
                     </p>
                     <p>
                       As a result, the signal-to-noise ratio has collapsed, making it nearly impossible to find the connections that
-                      truly matter. That is why we built something different.
+                      <strong> truly matter</strong>. That is why we built something different.
                     </p>
                   </div>
                 </ScrollAnimation>
@@ -87,23 +88,23 @@ export default function Home() {
               {/* Recruitment System & Exclusivity */}
               <div className="about-section">
                 <ScrollAnimation direction="up" delay={0}>
-                  <h2 className="section-heading">Productivity Through Exclusivity</h2>
+                  <h2 className="section-heading" data-category="Productivity">Productivity Through Exclusivity</h2>
                 </ScrollAnimation>
                 <ScrollAnimation direction="up" delay={150}>
                   <div className="about-text">
                     <p>
-                      We believe in a fundamental correlation between success and work. Surrounding yourself with like-minded peers
+                      We believe in a fundamental correlation between <strong>success and work</strong>. Surrounding yourself with like-minded peers
                       leads to meaningful opportunities and fosters tangible career growth.
                     </p>
                     <p>
                       Our admission process is structured to preserve this standard. Each application is thoroughly inspected to
-                      ensure that the profile would bring value to the network. This is about efficiency: creating an environment
+                      ensure that the profile would bring value to the network. This is about <strong>efficiency</strong>: creating an environment
                       where serious professionals can connect without distraction.
                     </p>
                     <p>
                       By limiting membership to accomplished professionals, executives, and leaders, we ensure that your time spent
                       on BlackPortals is productive. No sorting through irrelevant messages. No filtering out unqualified connections.
-                      Just quality interactions with people who understand what you are building.
+                      Just <strong>quality interactions</strong> with people who understand what you are building.
                     </p>
                   </div>
                 </ScrollAnimation>
@@ -112,7 +113,7 @@ export default function Home() {
               {/* Privacy Section */}
               <div className="about-section">
                 <ScrollAnimation direction="up" delay={0}>
-                  <h2 className="section-heading">Privacy First</h2>
+                  <h2 className="section-heading" data-category="Security">Privacy First</h2>
                 </ScrollAnimation>
                 <ScrollAnimation direction="up" delay={150}>
                   <div className="about-text">
@@ -121,12 +122,12 @@ export default function Home() {
                       professional information.
                     </p>
                     <p>
-                      All 1:1 and group conversations are protected by state-of-the-art post-quantum end-to-end encryption. None of
+                      All 1:1 and group conversations are protected by <strong>state-of-the-art post-quantum end-to-end encryption</strong>. None of
                       your behavior or data is tracked, stored, or sold. Your application is deleted after review, and account deletion
                       leads to immediate and permanent erasure of your activity on our network.
                     </p>
                     <p>
-                      Regarding the exclusivity of BlackPortals, security has always been our number one priority. Every account is
+                      Regarding the exclusivity of BlackPortals, <strong>security has always been our number one priority</strong>. Every account is
                       protected by mandatory 2FA, and a dedicated response team is available 24/7 to handle any security incident.
                     </p>
                   </div>
@@ -165,6 +166,7 @@ export default function Home() {
       <section className="portals-features-section">
         <div className="container">
           <ScrollAnimation direction="up" delay={0}>
+            <span className="section-category">Features</span>
             <h2 className="portals-section-title">Experience BlackPortals</h2>
           </ScrollAnimation>
           <ScrollAnimation direction="up" delay={100}>

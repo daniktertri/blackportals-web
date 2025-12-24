@@ -1,13 +1,7 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import '../styles/globals.css'
 import ClientScripts from '@/components/ClientScripts'
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700']
-})
 
 export const metadata: Metadata = {
   title: 'BlackPortals - Exclusive Private Network',
@@ -33,7 +27,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
       </head>
-      <body className={inter.className}>
+      <body>
         {children}
         <Script src="https://s3.tradingview.com/tv.js" strategy="lazyOnload" />
         <ClientScripts />
