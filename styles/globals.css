@@ -4272,28 +4272,72 @@ section {
     left: 20px;
 }
 
+/* Floating Top Bar Container */
+.floating-top-bar {
+    position: relative;
+}
+
 @media (max-width: 768px) {
-    .floating-request-button {
-        top: 16px;
-        right: 16px;
-        padding: 10px 20px;
-        font-size: 0.875rem;
+    /* Mobile Top Bar */
+    .floating-top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 72px;
+        background: #000000;
+        background: linear-gradient(to bottom, #000000 0%, #000000 85%, rgba(0, 0, 0, 0) 100%);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
     }
     
-    .floating-request-button-left {
-        right: auto;
-        left: 16px;
-    }
-    
-    .floating-logo-button {
-        top: 16px;
-        left: 16px;
+    /* Mobile button styles within top bar */
+    .floating-top-bar .floating-request-button,
+    .floating-top-bar .floating-logo-button {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: auto;
         padding: 10px 16px;
+        margin: 0;
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(60px) saturate(200%);
+        -webkit-backdrop-filter: blur(60px) saturate(200%);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 999px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
+                    0 0 0 0.5px rgba(255, 255, 255, 0.08) inset,
+                    0 1px 0 0 rgba(255, 255, 255, 0.05) inset;
+        transform: none;
+        animation: none;
         font-size: 0.875rem;
     }
     
-    .floating-logo-icon {
+    .floating-top-bar .floating-request-button:hover,
+    .floating-top-bar .floating-logo-button:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.18);
+        transform: none;
+    }
+    
+    .floating-top-bar .floating-request-button:active,
+    .floating-top-bar .floating-logo-button:active {
+        transform: none;
+        opacity: 0.7;
+    }
+    
+    .floating-top-bar .floating-logo-icon {
         width: 20px;
         height: 20px;
+    }
+    
+    .floating-top-bar .floating-request-button-left {
+        right: auto;
+        left: 0;
     }
 } 

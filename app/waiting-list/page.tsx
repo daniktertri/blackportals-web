@@ -1,7 +1,6 @@
 'use client'
 
-import FloatingRequestButton from '@/components/FloatingRequestButton'
-import FloatingLogoButton from '@/components/FloatingLogoButton'
+import FloatingTopBar from '@/components/FloatingTopBar'
 import { FormEvent, useState, useRef } from 'react'
 
 export default function WaitingList() {
@@ -69,8 +68,7 @@ export default function WaitingList() {
 
   return (
     <>
-      <FloatingLogoButton alwaysVisible={true} />
-      <FloatingRequestButton position="right" alwaysVisible={true} />
+      <FloatingTopBar showLogo={true} showRequestAccess={true} requestAccessPosition="right" />
       <section className="hero">
         <div className="container">
           <div className="hero-content">
