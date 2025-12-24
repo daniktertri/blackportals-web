@@ -424,7 +424,7 @@ body {
     align-items: center;
     background: #000000;
     position: relative;
-    padding: 120px 0 80px;
+    padding: 120px 0 20px;
     overflow: hidden;
 }
 
@@ -1411,6 +1411,7 @@ section {
     background: #000000;
     position: relative;
     overflow: hidden;
+    padding-top: 20px;
 }
 
 .about::before {
