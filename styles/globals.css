@@ -424,7 +424,7 @@ body {
     align-items: center;
     background: #000000;
     position: relative;
-    padding: 120px 0 20px;
+    padding: 120px 0 80px;
     overflow: hidden;
 }
 
@@ -1411,7 +1411,6 @@ section {
     background: #000000;
     position: relative;
     overflow: hidden;
-    padding-top: 20px;
 }
 
 .about::before {
@@ -2748,7 +2747,7 @@ section {
 }
 
 .about-page .about-text p {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .page-title {
@@ -2822,7 +2821,7 @@ section {
 
 /* About Page Sections */
 .about-section {
-    margin-bottom: 5rem;
+    margin-bottom: 15rem;
 }
 
 .about-section:last-child {
@@ -2854,7 +2853,7 @@ section {
 .about-content .about-text p {
     font-size: 1.125rem;
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
     line-height: 1.7;
     font-weight: 400;
 }
