@@ -53,7 +53,6 @@ export default function ClientScripts() {
 
     return () => {
       document.removeEventListener('click', handleSmoothScroll)
-      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
