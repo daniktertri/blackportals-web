@@ -38,14 +38,10 @@ export default function Portals() {
             {/* Feature 1 */}
             <div className="portals-feature-item">
               <div className="portals-feature-mockup">
-                <video 
-                  src="/mockup/video1.mp4" 
+                <img 
+                  src="/mockup/portals.png" 
+                  alt="Exclusive Circles" 
                   className="mockup-image mockup-image-small" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  aria-label="Exclusive Circles"
                 />
               </div>
               <div className="portals-feature-content">
