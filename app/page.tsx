@@ -155,7 +155,15 @@ export default function Home() {
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={200}>
               <div className="portals-hero-mockup">
-                <img src="/mockup/test.png" alt="BlackPortals App" className="mockup-image" />
+                <video 
+                  src="/mockup/video1.mp4" 
+                  className="mockup-image" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  aria-label="BlackPortals App"
+                />
               </div>
             </ScrollAnimation>
           </div>
@@ -180,7 +188,15 @@ export default function Home() {
             <ScrollAnimation direction="up" delay={0}>
               <div className="portals-feature-item">
                 <div className="portals-feature-mockup">
-                  <img src="/mockup/test.png" alt="Exclusive Circles" className="mockup-image mockup-image-small" />
+                  <video 
+                    src="/mockup/video1.mp4" 
+                    className="mockup-image mockup-image-small" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    aria-label="Exclusive Circles"
+                  />
                 </div>
                 <div className="portals-feature-content">
                   <h3>Exclusive Circles</h3>
@@ -193,7 +209,15 @@ export default function Home() {
             <ScrollAnimation direction="up" delay={150}>
               <div className="portals-feature-item portals-feature-item-reverse">
                 <div className="portals-feature-mockup">
-                  <img src="/mockup/test.png" alt="Private Messaging" className="mockup-image mockup-image-small" />
+                  <video 
+                    src="/mockup/video1.mp4" 
+                    className="mockup-image mockup-image-small" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    aria-label="Private Messaging"
+                  />
                 </div>
                 <div className="portals-feature-content">
                   <h3>Private Messaging</h3>
@@ -206,7 +230,15 @@ export default function Home() {
             <ScrollAnimation direction="up" delay={300}>
               <div className="portals-feature-item">
                 <div className="portals-feature-mockup">
-                  <img src="/mockup/test.png" alt="Secure & Private" className="mockup-image mockup-image-small" />
+                  <video 
+                    src="/mockup/video1.mp4" 
+                    className="mockup-image mockup-image-small" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    aria-label="Secure & Private"
+                  />
                 </div>
                 <div className="portals-feature-content">
                   <h3>Secure & Private</h3>
@@ -227,12 +259,28 @@ export default function Home() {
           <div className="portals-showcase-grid">
             <ScrollAnimation direction="up" delay={100}>
               <div className="portals-showcase-mockup">
-                <img src="/mockup/test.png" alt="BlackPortals App" className="mockup-image mockup-image-large" />
+                <video 
+                  src="/mockup/video1.mp4" 
+                  className="mockup-image mockup-image-large" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  aria-label="BlackPortals App"
+                />
               </div>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={200}>
               <div className="portals-showcase-mockup">
-                <img src="/mockup/test.png" alt="BlackPortals App" className="mockup-image mockup-image-large" />
+                <video 
+                  src="/mockup/video1.mp4" 
+                  className="mockup-image mockup-image-large" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  aria-label="BlackPortals App"
+                />
               </div>
             </ScrollAnimation>
           </div>

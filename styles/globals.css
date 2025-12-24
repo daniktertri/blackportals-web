@@ -3040,7 +3040,8 @@ section {
 }
 
 /* Mockup Image Styles - Plain images only, no frames or borders */
-.mockup-image {
+.mockup-image,
+.mockup-image video {
     display: block;
     width: auto;
     height: auto;
