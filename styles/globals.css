@@ -3184,6 +3184,14 @@ section {
     margin: 0 auto;
 }
 
+.portals-hero-content {
+    order: 1;
+}
+
+.portals-hero-mockup {
+    order: 2;
+}
+
 @media (max-width: 1024px) {
     .portals-hero-grid {
         grid-template-columns: 1fr;
