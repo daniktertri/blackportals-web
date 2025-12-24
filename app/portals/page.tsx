@@ -16,14 +16,10 @@ export default function Portals() {
               </p>
             </div>
             <div className="portals-hero-mockup">
-              <video 
-                src="/mockup/video1.mp4" 
+              <img 
+                src="/mockup/intro.png" 
+                alt="BlackPortals App" 
                 className="mockup-image" 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                aria-label="BlackPortals App"
               />
             </div>
           </div>
