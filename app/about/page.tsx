@@ -5,22 +5,6 @@ export default function About() {
         <div className="container">
           <div className="about-page-content">
             <div className="about-content">
-              {/* Failure of Other Networks */}
-              <div className="about-section">
-                <h2 className="section-heading">Why BlackPortals?</h2>
-                <div className="about-text">
-                  <p>
-                    Traditional professional networks have become cluttered with noise, irrelevant connections, and endless spam.
-                    The model has failed by letting quantity win over quality and transforming that space into a self contemplative
-                    haven for wannabe professionals.
-                  </p>
-                  <p>
-                    As a result, the signal-to-noise ratio has collapsed, making it nearly impossible to find the connections that
-                    truly matter. That is why we built something different.
-                  </p>
-                </div>
-              </div>
-
               {/* Recruitment System & Exclusivity */}
               <div className="about-section">
                 <h2 className="section-heading">Productivity Through Exclusivity</h2>

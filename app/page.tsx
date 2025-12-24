@@ -65,26 +65,6 @@ export default function Home() {
         <div className="container">
           <div className="about-page-content">
             <div className="about-content">
-              {/* Failure of Other Networks */}
-              <div className="about-section">
-                <ScrollAnimation direction="up" delay={0}>
-                  <h2 className="section-heading" data-category="Exclusivity">Why BlackPortals?</h2>
-                </ScrollAnimation>
-                <ScrollAnimation direction="up" delay={150}>
-                  <div className="about-text">
-                    <p>
-                      Traditional professional networks have become cluttered with noise, irrelevant connections, and endless spam.
-                      The model has failed by letting quantity win over quality and transforming that space into a self contemplative
-                      haven for wannabe professionals.
-                    </p>
-                    <p>
-                      As a result, the signal-to-noise ratio has collapsed, making it nearly impossible to find the connections that
-                      <strong> truly matter</strong>. That is why we built something different.
-                    </p>
-                  </div>
-                </ScrollAnimation>
-              </div>
-
               {/* Recruitment System & Exclusivity */}
               <div className="about-section">
                 <ScrollAnimation direction="up" delay={0}>
