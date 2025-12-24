@@ -3185,11 +3185,11 @@ section {
 }
 
 .portals-hero-content {
-    order: 1;
+    order: 2;
 }
 
 .portals-hero-mockup {
-    order: 2;
+    order: 1;
 }
 
 @media (max-width: 1024px) {
