@@ -429,24 +429,7 @@ body {
     overflow: hidden;
 }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 600px;
-    background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(20, 20, 20, 0.5) 20%,
-        rgba(30, 30, 30, 0.7) 40%,
-        rgba(35, 35, 35, 0.85) 60%,
-        rgba(25, 25, 25, 0.95) 80%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    pointer-events: none;
-    z-index: 2;
-}
+/* Hero section - no gradients */
 
 @media (max-width: 768px) {
     .hero {
@@ -1425,36 +1408,6 @@ section {
     overflow: hidden;
 }
 
-/* Gradient separator from hero to about */
-.about {
-    background: linear-gradient(to bottom,
-        #000000 0%,
-        #0a0a0a 20%,
-        #151515 40%,
-        #1a1a1a 60%,
-        #000000 100%
-    );
-}
-
-.about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 600px;
-    background: linear-gradient(to bottom, 
-        rgba(0, 0, 0, 0) 0%,
-        rgba(20, 20, 20, 0.6) 15%,
-        rgba(30, 30, 30, 0.8) 35%,
-        rgba(25, 25, 25, 0.9) 55%,
-        rgba(15, 15, 15, 0.95) 75%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    pointer-events: none;
-    z-index: 1;
-}
-
 
 @keyframes fadeInUp {
     from {
@@ -1698,17 +1651,17 @@ section {
     z-index: 1;
 }
 
-.portals-hero-grid {
+.portals-hero-section .container {
     position: relative;
     z-index: 1;
 }
 
-.portals-features-grid {
+.portals-features-section .container {
     position: relative;
     z-index: 1;
 }
 
-.portals-showcase-grid {
+.portals-showcase-section .container {
     position: relative;
     z-index: 1;
 }
@@ -2021,23 +1974,7 @@ section {
     overflow: hidden;
 }
 
-/* Gradient separator before footer */
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 400px;
-    background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(10, 10, 15, 0.5) 30%,
-        rgba(15, 15, 20, 0.75) 60%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    pointer-events: none;
-    z-index: 0;
-}
+/* Footer - no gradient */
 
 .footer .container {
     position: relative;
@@ -2817,34 +2754,10 @@ section {
     overflow: hidden;
 }
 
-/* Gradient separator from about to about-page */
 .about-page {
-    background: linear-gradient(to bottom,
-        #000000 0%,
-        #0f0f0f 25%,
-        #1a1a1a 50%,
-        #151515 75%,
-        #000000 100%
-    );
-}
-
-.about-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 600px;
-    background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(25, 25, 25, 0.7) 20%,
-        rgba(35, 35, 35, 0.85) 40%,
-        rgba(30, 30, 30, 0.95) 60%,
-        rgba(20, 20, 20, 1) 80%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    pointer-events: none;
-    z-index: 0;
+    background: #000000;
+    position: relative;
+    overflow: hidden;
 }
 
 .about-page-content {
@@ -3255,15 +3168,11 @@ section {
     overflow: hidden;
 }
 
-/* Gradient separator from about-page to portals-hero */
+/* Gradient Transition 1: From About-Page to Portals Hero - Apple Style */
 .portals-hero-section {
-    background: linear-gradient(to bottom,
-        #000000 0%,
-        #0d0d0d 20%,
-        #181818 40%,
-        #121212 60%,
-        #000000 100%
-    );
+    background: #000000;
+    position: relative;
+    overflow: hidden;
 }
 
 .portals-hero-section::before {
@@ -3272,32 +3181,11 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    height: 600px;
+    height: 400px;
     background: linear-gradient(to bottom,
         rgba(0, 0, 0, 0) 0%,
-        rgba(30, 30, 30, 0.6) 20%,
-        rgba(40, 40, 40, 0.8) 40%,
-        rgba(35, 35, 35, 0.9) 60%,
-        rgba(25, 25, 25, 0.95) 80%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Gradient fade at bottom of portals-hero */
-.portals-hero-section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 500px;
-    background: linear-gradient(to top,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(20, 20, 20, 0.6) 25%,
-        rgba(30, 30, 30, 0.8) 50%,
-        rgba(25, 25, 25, 0.95) 75%,
+        rgba(8, 8, 8, 0.3) 30%,
+        rgba(12, 12, 12, 0.5) 60%,
         rgba(0, 0, 0, 1) 100%
     );
     pointer-events: none;
@@ -3423,53 +3311,10 @@ section {
     overflow: hidden;
 }
 
-/* Gradient separator from portals-hero to portals-features */
 .portals-features-section {
-    background: linear-gradient(to bottom,
-        #000000 0%,
-        #0a0a0a 25%,
-        #1a1a1a 50%,
-        #0f0f0f 75%,
-        #000000 100%
-    );
-}
-
-.portals-features-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 600px;
-    background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(28, 28, 28, 0.6) 20%,
-        rgba(38, 38, 38, 0.8) 40%,
-        rgba(32, 32, 32, 0.9) 60%,
-        rgba(22, 22, 22, 0.95) 80%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Gradient fade at bottom of portals-features */
-.portals-features-section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 500px;
-    background: linear-gradient(to top,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(25, 25, 25, 0.6) 25%,
-        rgba(35, 35, 35, 0.8) 50%,
-        rgba(30, 30, 30, 0.95) 75%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    pointer-events: none;
-    z-index: 0;
+    background: #000000;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Portals section title styles moved to Premium Typography section below */
@@ -3577,15 +3422,11 @@ section {
     overflow: hidden;
 }
 
-/* Gradient separator from portals-features to portals-showcase */
+/* Gradient Transition 2: From Portals Features to Portals Showcase - Apple Style */
 .portals-showcase-section {
-    background: linear-gradient(to bottom,
-        #000000 0%,
-        #0f0f0f 25%,
-        #1f1f1f 50%,
-        #151515 75%,
-        #000000 100%
-    );
+    background: #000000;
+    position: relative;
+    overflow: hidden;
 }
 
 .portals-showcase-section::before {
@@ -3594,13 +3435,11 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    height: 600px;
+    height: 400px;
     background: linear-gradient(to bottom,
         rgba(0, 0, 0, 0) 0%,
-        rgba(30, 30, 30, 0.6) 20%,
-        rgba(40, 40, 40, 0.8) 40%,
-        rgba(35, 35, 35, 0.9) 60%,
-        rgba(25, 25, 25, 0.95) 80%,
+        rgba(10, 10, 10, 0.3) 30%,
+        rgba(15, 15, 15, 0.5) 60%,
         rgba(0, 0, 0, 1) 100%
     );
     pointer-events: none;
