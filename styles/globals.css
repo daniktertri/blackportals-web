@@ -4286,17 +4286,25 @@ section {
         right: 0;
         height: 72px;
         background: #000000;
-        background: linear-gradient(to bottom, #000000 0%, #000000 85%, rgba(0, 0, 0, 0) 100%);
         z-index: 1000;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     /* Add padding to page content when top bar is present */
     body:has(.floating-top-bar) .hero {
         padding-top: 100px;
+    }
+    
+    /* Force buttons to be visible on mobile when inside top bar */
+    .floating-top-bar .floating-request-button,
+    .floating-top-bar .floating-logo-button {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     /* Mobile button styles within top bar */

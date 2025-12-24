@@ -1,12 +1,12 @@
 import Footer from '@/components/Footer'
 import StarfieldTunnel from '@/components/StarfieldTunnel'
-import FloatingRequestButton from '@/components/FloatingRequestButton'
+import FloatingTopBar from '@/components/FloatingTopBar'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <>
-      <FloatingRequestButton />
+      <FloatingTopBar showLogo={true} showRequestAccess={true} requestAccessPosition="right" />
 
       {/* Hero Section */}
       <section id="home" className="hero">
