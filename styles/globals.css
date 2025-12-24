@@ -4294,6 +4294,11 @@ section {
         padding: 0 20px;
     }
     
+    /* Add padding to page content when top bar is present */
+    body:has(.floating-top-bar) .hero {
+        padding-top: 100px;
+    }
+    
     /* Mobile button styles within top bar */
     .floating-top-bar .floating-request-button,
     .floating-top-bar .floating-logo-button {
