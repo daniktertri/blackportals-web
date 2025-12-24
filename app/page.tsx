@@ -41,18 +41,18 @@ export default function Home() {
             <ScrollAnimation direction="up" delay={100}>
               <div className="about-text">
                 <p className="about-lead">
-                  BlackPortals is an exclusive private network for executives, senior professionals, and
+                  BlackPortals is an exclusive <span style={{ color: 'white' }}>private</span> network for executives, senior professionals, and
                   high-potential individuals.
                 </p>
                 <p>
-                  Membership is reviewed to uphold high standard and ensure relevance. BlackPortals is
+                  Membership is reviewed to uphold high standard and ensure <span style={{ color: 'white' }}>relevance</span>. BlackPortals is
                   designed for focused, direct interactions among peers at exceptional levels of
                   responsibility.
                 </p>
                 <p>
-                  Privacy and security are fundamental. All communications are post-quantum encrypted.
-                  The platform provides a discreet environment for collaboration and professional
-                  exchange without advertisements or unnecessary noise.
+                  <span style={{ color: 'white' }}>Privacy and security</span> are fundamental. All communications are post-quantum encrypted.
+                  The platform provides a <span style={{ color: 'white' }}>discreet</span> environment for collaboration and professional
+                  exchange <span style={{ color: 'white' }}>without</span> advertisements or unnecessary noise.
                 </p>
               </div>
             </ScrollAnimation>
