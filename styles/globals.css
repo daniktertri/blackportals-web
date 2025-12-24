@@ -2824,6 +2824,10 @@ section {
     margin-bottom: 15rem;
 }
 
+.about-section:nth-child(3) {
+    margin-top: 10rem;
+}
+
 .about-section:last-child {
     margin-bottom: 0;
 }
