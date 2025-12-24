@@ -39,36 +39,6 @@ export default function ClientScripts() {
       })
     }, observerOptions)
 
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.feature-item, .audience-item, .step, .privacy-feature')
-    
-    animatedElements.forEach(el => {
-      el.setAttribute('style', 'opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease;')
-      observer.observe(el)
-    })
-
-    // Portal Animation Enhancement
-    const portalRings = document.querySelectorAll('.portal-ring')
-    portalRings.forEach(ring => {
-      ring.addEventListener('mouseenter', () => {
-        ;(ring as HTMLElement).style.animationPlayState = 'paused'
-      })
-      
-      ring.addEventListener('mouseleave', () => {
-        ;(ring as HTMLElement).style.animationPlayState = 'running'
-      })
-    })
-
-    // Parallax Effect for Hero Section
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset
-      const heroVisual = document.querySelector('.hero-visual')
-      if (heroVisual) {
-        ;(heroVisual as HTMLElement).style.transform = `translateY(${scrolled * 0.1}px)`
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
 
     // Enhanced Button Hover Effects
     document.querySelectorAll('.btn').forEach(button => {

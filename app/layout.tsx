@@ -29,7 +29,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <Script src="https://s3.tradingview.com/tv.js" strategy="lazyOnload" />
         <ClientScripts />
       </body>
     </html>
