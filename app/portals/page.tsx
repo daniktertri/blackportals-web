@@ -53,38 +53,30 @@ export default function Portals() {
             {/* Feature 2 */}
             <div className="portals-feature-item portals-feature-item-reverse">
               <div className="portals-feature-mockup">
-                <video 
-                  src="/mockup/video1.mp4" 
+                <img 
+                  src="/mockup/ai-search.png" 
+                  alt="AI Search" 
                   className="mockup-image mockup-image-small" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  aria-label="Private Messaging"
                 />
               </div>
               <div className="portals-feature-content">
-                <h3>Private Messaging</h3>
-                <p>End-to-end encrypted conversations ensure your privacy. Communicate securely with peers, share insights, and build meaningful professional relationships.</p>
+                <h3>AI Search</h3>
+                <p>Stop wasting time scrolling through endless profiles. Simply describe what you're looking for—whether it's a co-founder for your startup, an expert in quantum computing, or a partner for your next venture. Our AI understands context, intent, and nuance, finding the exact person who matches your needs. No filters. No guesswork. Just results.</p>
               </div>
             </div>
 
             {/* Feature 3 */}
             <div className="portals-feature-item">
               <div className="portals-feature-mockup">
-                <video 
-                  src="/mockup/video1.mp4" 
+                <img 
+                  src="/mockup/detailed-profiles.png" 
+                  alt="Detailed Profiles" 
                   className="mockup-image mockup-image-small" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  aria-label="Secure & Private"
                 />
               </div>
               <div className="portals-feature-content">
-                <h3>Secure & Private</h3>
-                <p>Post-quantum encryption, mandatory 2FA, and screenshot protection. Your professional network stays private and secure.</p>
+                <h3>Detailed Profiles</h3>
+                <p>Your professional identity, fully expressed. Build comprehensive profiles across up to 30 distinct categories—from professional achievements and industry expertise to languages spoken, athletic pursuits, and personal milestones. Every detail matters. Every achievement counts. Present yourself not just as a title, but as the complete professional you are.</p>
               </div>
             </div>
           </div>
