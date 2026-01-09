@@ -90,37 +90,6 @@ export default function Portals() {
           </div>
         </div>
       </section>
-
-      {/* App Showcase Section */}
-      <section className="portals-showcase-section">
-        <div className="container">
-          <h2 className="portals-section-title">See it in action</h2>
-          <div className="portals-showcase-grid">
-            <div className="portals-showcase-mockup">
-              <video 
-                src="/mockup/video1.mp4" 
-                className="mockup-image mockup-image-large" 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                aria-label="BlackPortals App"
-              />
-            </div>
-            <div className="portals-showcase-mockup">
-              <video 
-                src="/mockup/video1.mp4" 
-                className="mockup-image mockup-image-large" 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                aria-label="BlackPortals App"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

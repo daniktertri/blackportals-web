@@ -222,43 +222,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App Showcase Section */}
-      <section className="portals-showcase-section">
-        <div className="container">
-          <ScrollAnimation direction="up" delay={0}>
-            <h2 className="portals-section-title">See it in action</h2>
-          </ScrollAnimation>
-          <div className="portals-showcase-grid">
-            <ScrollAnimation direction="up" delay={100}>
-              <div className="portals-showcase-mockup">
-                <video 
-                  src="/mockup/video1.mp4" 
-                  className="mockup-image mockup-image-large" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  aria-label="BlackPortals App"
-                />
-              </div>
-            </ScrollAnimation>
-            <ScrollAnimation direction="up" delay={200}>
-              <div className="portals-showcase-mockup">
-                <video 
-                  src="/mockup/video1.mp4" 
-                  className="mockup-image mockup-image-large" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  aria-label="BlackPortals App"
-                />
-              </div>
-            </ScrollAnimation>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </>
   )
