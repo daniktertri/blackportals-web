@@ -14,12 +14,12 @@ export default function Home() {
         <StarfieldTunnel />
         <div className="hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">Axiom</h1>
+            <h1 className="hero-title">BlackPortals</h1>
             <p className="hero-subtitle">
-              Private connections &amp; events, without the noise
+              A private layer for connections &amp; events
             </p>
             <p className="hero-description">
-              Private events, rich profiles, and visual feeds that bring people together around what actually matters.
+              Host and join intimate, curated events. Capture them through private visual feeds. Stay connected through rich, contextual profiles.
             </p>
             <div className="hero-buttons" id="hero-join-button">
               <Link href="/waiting-list" className="btn btn-primary">
@@ -36,21 +36,18 @@ export default function Home() {
           <div className="about-content">
             <ScrollAnimation direction="up" delay={0}>
               <span className="section-category">Network</span>
-              <h2 className="section-title">What is Axiom</h2>
+              <h2 className="section-title">What is BlackPortals</h2>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={100}>
               <div className="about-text">
                 <p className="about-lead">
-                  Axiom is a <strong>private</strong> network built around invite-only events, meaningful connections, and
-                  shared experiences.
+                  BlackPortals is a <strong>private</strong> connections and events platform that blends the familiarity of social feeds with the depth of professional profiles.
                 </p>
                 <p>
-                  Instead of endless public feeds, Axiom focuses on <strong>relevance</strong>. You connect with people through
-                  private events, shared interests, and professional goals, keeping your network intentional and curated.
+                  Think of it as an Instagram-style experience for shared moments, combined with LinkedIn-grade profiles and private, invitation-only events. Every interaction lives in a space that is curated, intentional, and relevant to you.
                 </p>
                 <p>
-                  <strong>Privacy and control</strong> are fundamental. Axiom gives you a discreet space to share photos, stories,
-                  and updates from events—without ads, public exposure, or unnecessary noise.
+                  <strong>Privacy and control</strong> sit at the core of the product. You decide who sees your events, your photos, and your updates—without ads, public algorithms, or background noise shaping what you share.
                 </p>
               </div>
             </ScrollAnimation>
@@ -66,21 +63,18 @@ export default function Home() {
               {/* Recruitment System & Exclusivity */}
               <div className="about-section">
                 <ScrollAnimation direction="up" delay={0}>
-                  <h2 className="section-heading" data-category="Connections">Connections Around Private Events</h2>
+                  <h2 className="section-heading" data-category="Connections">Connections Built Around Real Moments</h2>
                 </ScrollAnimation>
                 <ScrollAnimation direction="up" delay={150}>
                   <div className="about-text">
                     <p>
-                      We believe the best connections start in the right rooms. Private events with the right people create
-                      opportunities that public networks cannot.
+                      The most meaningful relationships rarely start in a generic feed. They begin in the right rooms, with the right people, at the right time.
                     </p>
                     <p>
-                      On Axiom, events are the center of gravity. You join or host private gatherings, meet people who share
-                      your ambitions, and stay in touch through dedicated event spaces instead of getting lost in a global feed.
+                      On BlackPortals, private events are the center of gravity. You join or host curated gatherings, meet people who share your ambitions, and continue the conversation in dedicated spaces before, during, and after the event.
                     </p>
                     <p>
-                      The result is <strong>quality interactions</strong> with people who are actually relevant to you – not just another
-                      list of random connections.
+                      The result is a network made of <strong>quality interactions</strong> — people you have actually met, projects you truly care about, and opportunities that grow from real context rather than random connection requests.
                     </p>
                   </div>
                 </ScrollAnimation>
@@ -94,16 +88,13 @@ export default function Home() {
                 <ScrollAnimation direction="up" delay={150}>
                   <div className="about-text">
                     <p>
-                      In an era of infinite data collection, Axiom is built so you stay in charge of your personal and
-                      professional information.
+                      In an era of infinite data collection, BlackPortals is designed so you stay fully in charge of your personal and professional presence.
                     </p>
                     <p>
-                      Your private event spaces, conversations, and media are for you and the people you choose. We do not sell your data
-                      or flood your experience with tracking and advertising.
+                      Your private event spaces, conversations, and media are for you and the people you choose. There are no public rankings, no engagement farming, and no third parties buying insight into your behavior.
                     </p>
                     <p>
-                      Axiom is designed so your social and professional life can grow in private: focused on the right people, not on
-                      performing for an algorithm.
+                      BlackPortals gives you a premium, discreet environment where your social and professional life can grow in private—focused on the right people, not on performing for an algorithm.
                     </p>
                   </div>
                 </ScrollAnimation>
@@ -119,13 +110,12 @@ export default function Home() {
           <div className="portals-hero-grid">
             <ScrollAnimation direction="up" delay={0}>
               <div className="portals-hero-content">
-                <h1 className="portals-hero-title">Private connections &amp; events in one place</h1>
+                <h1 className="portals-hero-title">Private connections &amp; events, thoughtfully orchestrated</h1>
                 <p className="portals-hero-subtitle">
-                  Join and host private events where you meet the right people and keep the connection alive before, during, and after.
+                  Design intimate experiences, bring the right people together, and keep every interaction anchored to a shared moment.
                 </p>
                 <p className="portals-hero-description">
-                  Axiom combines visual feeds, rich profiles, and focused spaces so every interaction around an event is meaningful – and stays
-                  free from public noise.
+                  BlackPortals combines visual feeds, rich profiles, and focused spaces so every interaction around an event feels intentional, elevated, and entirely free from public noise.
                 </p>
               </div>
             </ScrollAnimation>
@@ -142,7 +132,7 @@ export default function Home() {
         <div className="container">
           <ScrollAnimation direction="up" delay={0}>
             <span className="section-category">Features</span>
-            <h2 className="portals-section-title">Experience Axiom</h2>
+            <h2 className="portals-section-title">Experience BlackPortals</h2>
           </ScrollAnimation>
           <ScrollAnimation direction="up" delay={100}>
             <p className="portals-section-subtitle">
