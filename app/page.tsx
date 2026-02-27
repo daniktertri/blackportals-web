@@ -14,12 +14,12 @@ export default function Home() {
         <StarfieldTunnel />
         <div className="hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">BlackPortals</h1>
+            <h1 className="hero-title">Axiom</h1>
             <p className="hero-subtitle">
-              A private, application-based, professional network
+              Private connections &amp; events, without the noise
             </p>
             <p className="hero-description">
-              Quality connections. Encrypted communications. No noise.
+              Private events, rich profiles, and visual feeds that bring people together around what actually matters.
             </p>
             <div className="hero-buttons" id="hero-join-button">
               <Link href="/waiting-list" className="btn btn-primary">
@@ -36,23 +36,21 @@ export default function Home() {
           <div className="about-content">
             <ScrollAnimation direction="up" delay={0}>
               <span className="section-category">Network</span>
-              <h2 className="section-title">What is BlackPortals</h2>
+              <h2 className="section-title">What is Axiom</h2>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={100}>
               <div className="about-text">
                 <p className="about-lead">
-                  BlackPortals is an exclusive <strong>private</strong> network for executives, senior professionals, and
-                  high-potential individuals.
+                  Axiom is a <strong>private</strong> network built around invite-only events, meaningful connections, and
+                  shared experiences.
                 </p>
                 <p>
-                  Membership is reviewed to uphold high standard and ensure <strong>relevance</strong>. BlackPortals is
-                  designed for focused, direct interactions among peers at exceptional levels of
-                  responsibility.
+                  Instead of endless public feeds, Axiom focuses on <strong>relevance</strong>. You connect with people through
+                  private events, shared interests, and professional goals, keeping your network intentional and curated.
                 </p>
                 <p>
-                  <strong>Privacy and security</strong> are fundamental. All communications are post-quantum encrypted.
-                  The platform provides a <strong>discreet</strong> environment for collaboration and professional
-                  exchange <strong>without</strong> advertisements or unnecessary noise.
+                  <strong>Privacy and control</strong> are fundamental. Axiom gives you a discreet space to share photos, stories,
+                  and updates from events—without ads, public exposure, or unnecessary noise.
                 </p>
               </div>
             </ScrollAnimation>
@@ -68,23 +66,21 @@ export default function Home() {
               {/* Recruitment System & Exclusivity */}
               <div className="about-section">
                 <ScrollAnimation direction="up" delay={0}>
-                  <h2 className="section-heading" data-category="Productivity">Productivity Through Exclusivity</h2>
+                  <h2 className="section-heading" data-category="Connections">Connections Around Private Events</h2>
                 </ScrollAnimation>
                 <ScrollAnimation direction="up" delay={150}>
                   <div className="about-text">
                     <p>
-                      We believe in a fundamental correlation between <strong>success and work</strong>. Surrounding yourself with like-minded peers
-                      leads to meaningful opportunities and fosters tangible career growth.
+                      We believe the best connections start in the right rooms. Private events with the right people create
+                      opportunities that public networks cannot.
                     </p>
                     <p>
-                      Our admission process is structured to preserve this standard. Each application is thoroughly inspected to
-                      ensure that the profile would bring value to the network. This is about <strong>efficiency</strong>: creating an environment
-                      where serious professionals can connect without distraction.
+                      On Axiom, events are the center of gravity. You join or host private gatherings, meet people who share
+                      your ambitions, and stay in touch through dedicated event spaces instead of getting lost in a global feed.
                     </p>
                     <p>
-                      By limiting membership to accomplished professionals, executives, and leaders, we ensure that your time spent
-                      on BlackPortals is productive. No sorting through irrelevant messages. No filtering out unqualified connections.
-                      Just <strong>quality interactions</strong> with people who understand what you are building.
+                      The result is <strong>quality interactions</strong> with people who are actually relevant to you – not just another
+                      list of random connections.
                     </p>
                   </div>
                 </ScrollAnimation>
@@ -98,17 +94,16 @@ export default function Home() {
                 <ScrollAnimation direction="up" delay={150}>
                   <div className="about-text">
                     <p>
-                      In an era of infinite data collection, at BlackPortals we believe you must stay in charge of your personal and
+                      In an era of infinite data collection, Axiom is built so you stay in charge of your personal and
                       professional information.
                     </p>
                     <p>
-                      All 1:1 and group conversations are protected by <strong>state-of-the-art post-quantum end-to-end encryption</strong>. None of
-                      your behavior or data is tracked, stored, or sold. Your application is deleted after review, and account deletion
-                      leads to immediate and permanent erasure of your activity on our network.
+                      Your private event spaces, conversations, and media are for you and the people you choose. We do not sell your data
+                      or flood your experience with tracking and advertising.
                     </p>
                     <p>
-                      Regarding the exclusivity of BlackPortals, <strong>security has always been our number one priority</strong>. Every account is
-                      protected by mandatory 2FA, and a dedicated response team is available 24/7 to handle any security incident.
+                      Axiom is designed so your social and professional life can grow in private: focused on the right people, not on
+                      performing for an algorithm.
                     </p>
                   </div>
                 </ScrollAnimation>
@@ -124,22 +119,18 @@ export default function Home() {
           <div className="portals-hero-grid">
             <ScrollAnimation direction="up" delay={0}>
               <div className="portals-hero-content">
-                <h1 className="portals-hero-title">Portals: Your new gateway to grow your network</h1>
+                <h1 className="portals-hero-title">Private connections &amp; events in one place</h1>
                 <p className="portals-hero-subtitle">
-                  Following your application, our reviewing team will add you to curated Portals where you will be able to connect with professionals who work in your field of interests.
+                  Join and host private events where you meet the right people and keep the connection alive before, during, and after.
                 </p>
                 <p className="portals-hero-description">
-                  Each Portal is a new opportunity to expand your business activities, discuss partnerships and share insights of your industry. BlackPortals exclusivity prevents unproductive noise and ensures that each minute spent within our community benefits you.
+                  Axiom combines visual feeds, rich profiles, and focused spaces so every interaction around an event is meaningful – and stays
+                  free from public noise.
                 </p>
               </div>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={200}>
               <div className="portals-hero-mockup">
-                <img 
-                  src="/mockup/intro.png" 
-                  alt="BlackPortals App" 
-                  className="mockup-image" 
-                />
               </div>
             </ScrollAnimation>
           </div>
@@ -151,7 +142,7 @@ export default function Home() {
         <div className="container">
           <ScrollAnimation direction="up" delay={0}>
             <span className="section-category">Features</span>
-            <h2 className="portals-section-title">Experience BlackPortals</h2>
+            <h2 className="portals-section-title">Experience Axiom</h2>
           </ScrollAnimation>
           <ScrollAnimation direction="up" delay={100}>
             <p className="portals-section-subtitle">
@@ -164,15 +155,10 @@ export default function Home() {
             <ScrollAnimation direction="up" delay={0}>
               <div className="portals-feature-item">
                 <div className="portals-feature-mockup">
-                  <img 
-                    src="/mockup/portals.png" 
-                    alt="Exclusive Circles" 
-                    className="mockup-image mockup-image-small" 
-                  />
                 </div>
                 <div className="portals-feature-content">
-                  <h3>Exclusive Circles</h3>
-                  <p>Connect with curated networks of professionals who share your level of achievement and ambition. Each circle is carefully vetted to ensure quality interactions.</p>
+                  <h3>Private Events</h3>
+                  <p>Create or join invite-only events with people who actually matter to you. Every space is curated so conversations stay focused, relevant, and high signal.</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -181,15 +167,10 @@ export default function Home() {
             <ScrollAnimation direction="up" delay={150}>
               <div className="portals-feature-item portals-feature-item-reverse">
                 <div className="portals-feature-mockup">
-                  <img 
-                    src="/mockup/ai-search.png" 
-                    alt="AI Search" 
-                    className="mockup-image mockup-image-small" 
-                  />
                 </div>
                 <div className="portals-feature-content">
-                  <h3>AI Search</h3>
-                  <p>Stop wasting time scrolling through endless profiles. Simply describe what you're looking for—whether it's a co-founder for your startup, an expert in quantum computing, or a partner for your next venture. Our AI understands context, intent, and nuance, finding the exact person who matches your needs. No filters. No guesswork. Just results.</p>
+                  <h3>Event Feeds</h3>
+                  <p>Share and follow Instagram-style feeds made of photos, stories, and moments from the events you care about – only visible to the people who are part of them.</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -198,15 +179,10 @@ export default function Home() {
             <ScrollAnimation direction="up" delay={300}>
               <div className="portals-feature-item">
                 <div className="portals-feature-mockup">
-                  <img 
-                    src="/mockup/detailed-profiles.png" 
-                    alt="Detailed Profiles" 
-                    className="mockup-image mockup-image-small" 
-                  />
                 </div>
                 <div className="portals-feature-content">
-                  <h3>Detailed Profiles</h3>
-                  <p>Your professional identity, fully expressed. Build comprehensive profiles across up to 30 distinct categories—from professional achievements and industry expertise to languages spoken, athletic pursuits, and personal milestones. Every detail matters. Every achievement counts. Present yourself not just as a title, but as the complete professional you are.</p>
+                  <h3>Rich Profiles</h3>
+                  <p>Combine the depth of a LinkedIn-style profile with the context of real-world events. Show who you are, what you do, and where you’ve met people – all in one place.</p>
                 </div>
               </div>
             </ScrollAnimation>
